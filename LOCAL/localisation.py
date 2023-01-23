@@ -1,7 +1,7 @@
 #Don't be a thief by stealing other's Hardwork, it took time and effort to make this repo.
 #Respect my work by not making any changes here.
 
-START_TEXT = "Hallo @{username}\n\nSaya adalah MS VIDEO EDITOR,Saya bisa melakukan encode,rename,triming,"
+START_TEXT = "Hallo @{username}\n\nSaya adalah MS VIDEO EDITOR!!!\nSaya bisa melakukan beberapa perintah editing video,Anda harus join channel saya sebelum menggunakan saya:v"
 
 FORCE_SUB_TEXT = "In order to use this bot, you've to join my parent channel."
 
