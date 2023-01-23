@@ -15,8 +15,8 @@ for name in files:
         plugin_name = patt.stem
         load_plugins(plugin_name.replace(".py", ""))
         
-print("Successfully deployed!")
-print("@MaheshChauhan • @DroneBots")
+print("Bot telah aktif🔥🔥🔥")
+print("@MSDEPLOY | @MS_DZULQURNAIN_NET")
 
 if __name__ == "__main__":
     Drone.run_until_disconnected()
