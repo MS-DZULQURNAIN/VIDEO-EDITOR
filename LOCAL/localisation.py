@@ -11,15 +11,15 @@ SUPPORT_LINK = "https://t.me/MS_DZULQURNAIN_NET"
 
 info_text = "❖MS VIDEO EDITOR❖\n\n✰ Owner Repo : @ms_dzulqurnain\n⇝ Channel : @MSDEPLOY\n⇝ GRUB : @MS_DZULQURNAIN_NET\n⇝ Beli/bongkar chip hdi terpercaya: @ZULLL_CHIP\n\nᝣMS DEPLOYᝣ"   
 
-help_text = """**v1.4**
+help_text = """**❖MS VIDEO EDITOR❖**
 
-•`Encode` - encode your video into different lib format or resolution
+•`Encode` - Ubah resolusi video mu
 
-•`HEVC compress` - negligible loss compression
+•`HEVC compress` - Mengubah resolusi burik
 
-•`FAST compress` - Very fast and Efficient compression
+•`FAST compress` - Kompres dengan cepat & lebih efisien
 
-•`Convert` - change formats or extract audio of any video
+•`Convert` - Mengubah format/mengekstrak audio dari video mu
 
 •`Rename` - rename any file, extension not required
 
