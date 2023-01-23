@@ -37,9 +37,9 @@ async def menu(event):
     
 @Drone.on(events.callbackquery.CallbackQuery(data="info"))
 async def info(event):
-    await event.edit(f'**ℹ️NFO:**\n\n{info_text}',
+    await event.edit(f'**INPO:**\n\n{info_text}',
                     buttons=[[
-                         Button.inline("Menu.", data="menu")]])
+                         Button.inline("Menu", data="menu")]])
     
 @Drone.on(events.callbackquery.CallbackQuery(data="notice"))
 async def notice(event):
@@ -49,16 +49,16 @@ async def notice(event):
 async def source(event):
     await event.edit(source_text,
                     buttons=[[
-                         Button.url("FOR PERSONAL USE", url="https://github.com/vasusen-code/videoconvertor/tree/main"),
-                         Button.url("FOR YOUR CHANNEL ", url="https://github.com/vasusen-code/videoconvertor/")]])
+                         Button.url("JOIN CHANNEL 1", url="https://t.me/MSDEPLOY"),
+                         Button.url("JOIN CHANNEL 2 ", url="https://t.me/MS_DZULQURNAIN_NET")]])
                          
                     
 @Drone.on(events.callbackquery.CallbackQuery(data="help"))
 async def help(event):
     await event.edit('**👥HELP & SETTINGS**',
                     buttons=[[
-                         Button.inline("SET THUMB", data="sett"),
-                         Button.inline("REM THUMB", data='remt')],
+                         Button.inline("PSG THUMB", data="sett"),
+                         Button.inline("HPS THUMB", data='remt')],
                          [
                          Button.inline("PLUGINS", data="plugins"),
                          Button.inline("RESTART", data="restart")],
@@ -79,7 +79,7 @@ async def sett(event):
     msg = await button.get_reply_message() 
     await event.delete()
     async with Drone.conversation(event.chat_id) as conv: 
-        xx = await conv.send_message("Send me any image for thumbnail as a `reply` to this message.")
+        xx = await conv.send_message("Kirim saya foto untuk thumbnail dengan reply pesan ini")
         x = await conv.get_reply()
         if not x.media:
             xx.edit("No media found.")
