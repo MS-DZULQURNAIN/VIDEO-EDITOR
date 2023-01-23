@@ -32,7 +32,7 @@ from main.plugins.ssgen import screenshot
 from LOCAL.localisation import source_text, SUPPORT_LINK
 
 #Don't be a MF by stealing someone's hardwork.
-forcesubtext = f"<b>Hallo sebelum kamu menggunakan saya kamu wajib join channel & grub dibawah ini</b>\n\n<b>1.@MS_DZULQURNAIN_NET\n2.@{FORCESUB_UN}</b>\n\n<b>Owner 👤@ms_dzulqurnain</b>"
+forcesubtext = f"Hallo sebelum menggunakan saya kamu wajib join channel & grub dibawah ini😇\n\n1.\n2.@{FORCESUB_UN}</b>\n\n<b>Owner 👤@ms_dzulqurnain</b>"
 
 @Drone.on(events.NewMessage(incoming=True,func=lambda e: e.is_private))
 async def compin(event):
