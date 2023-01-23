@@ -25,7 +25,9 @@ from ethon.mystarts import vc_menu
 async def start(event):
     await event.reply(f'{st}', 
                       buttons=[
-                              [Button.inline("Menu.", data="menu")]
+                              [Button.inline("CHANNEL 1", data="ch1")]
+                              [Button.inline("CHANNEL 2", data="ch2")]
+                              [Button.inline("Menu.", data="menu") ]
                               ])
     
 @Drone.on(events.callbackquery.CallbackQuery(data="menu"))
