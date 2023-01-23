@@ -9,7 +9,7 @@ CHANNEL_LINK = "https://t.me/MSDEPLOY"
 
 SUPPORT_LINK = "https://t.me/MS_DZULQURNAIN_NET"
 
-info_text = "This bot is developed by @MaheshChauhan\n\nWritten in python library TELETHON.\n\nBot by : @DroneBots\nSupport : @TeamDrone\n\nV1.4"   
+info_text = "❖MS VIDEO EDITOR❖\n\n✰ Owner Repo : @ms_dzulqurnain\n⇝ Channel : @MSDEPLOY\n⇝ GRUB : @MS_DZULQURNAIN_NET\n⇝ Beli/bongkar chip hdi terpercaya: @ZULLL_CHIP\n\nᝣMS DEPLOYᝣ"   
 
 help_text = """**v1.4**
 
