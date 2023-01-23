@@ -31,7 +31,13 @@ async def start(event):
                               ])
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} started the BOT')
-    
+
+@Drone.on(events.callbackquery.CallbackQuery(data="ch1"))
+async def menu(event):
+    await event.edit(source_text,
+                    button=[[
+                        Button.url("JOIN CHANNEL", url="https://t.me/MSDEPLOY") ]])
+                          
 @Drone.on(events.callbackquery.CallbackQuery(data="menu"))
 async def menu(event):
     await vc_menu(event)
