@@ -25,8 +25,7 @@ from LOCAL.localisation import info_text, spam_notice, help_text, DEV, source_te
 @Drone.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
     await event.reply(f'{st}', 
-                      buttons=[source_text,
-                               [Button.url("JOIN CHANNEL", url="https://t.me/MSDEPLOY")]
+                      buttons=[
                                [Button.inline("Menu", data="menu")]
                               ])
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
