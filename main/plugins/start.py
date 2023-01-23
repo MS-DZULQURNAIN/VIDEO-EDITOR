@@ -27,7 +27,7 @@ async def start(event):
     await event.reply(f'{st}', 
                       buttons=[
                               [Button.inline("Menu.", data="menu")]
-                              [Button.inline("CHANNEL 2", data="https://t.me/MSDEPLOY")]
+                              [Button.inline("CHANNEL 2", url="https://t.me/MSDEPLOY")]
                               ])
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} started the BOT')
