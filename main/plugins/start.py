@@ -58,10 +58,9 @@ async def help(event):
     await event.edit('**👥HELP & SETTINGS**',
                     buttons=[[
                          Button.inline("PSG THUMB", data="sett"),
-                         Button.inline("HPS THUMB", data='remt')],
-                         [
+                         Button.inline("HPS THUMB", data='remt'), 
                          Button.inline("PLUGINS", data="plugins"),
-                         Button.inline("RESTART", data="restart")],
+                         Button.inline("RESTART", data="restart"),
                          [Button.url("SUPPORT", url=f"{SUPPORT_LINK}")],
                          [
                          Button.inline("BACK", data="menu")]])
@@ -82,12 +81,12 @@ async def sett(event):
         xx = await conv.send_message("Kirim saya foto untuk thumbnail dengan reply pesan ini")
         x = await conv.get_reply()
         if not x.media:
-            xx.edit("No media found.")
+            xx.edit("Media tidak ada")
         mime = x.file.mime_type
         if not 'png' in mime:
             if not 'jpg' in mime:
                 if not 'jpeg' in mime:
-                    return await xx.edit("No image found.")
+                    return await xx.edit("Foto tidak ada")
         await set_thumbnail(event, x.media)
         await xx.delete()
         
@@ -99,7 +98,7 @@ async def remt(event):
 @Drone.on(events.callbackquery.CallbackQuery(data="restart"))
 async def res(event):
     if not f'{event.sender_id}' == f'{int(AUTH_USERS)}':
-        return await event.edit("Only authorized user can restart!")
+        return await event.edit("Hanya pengguna spesial yg dapat merestart")
     result = await heroku_restart()
     if result is None:
         await event.edit("You have not filled `HEROKU_API` and `HEROKU_APP_NAME` vars.")
