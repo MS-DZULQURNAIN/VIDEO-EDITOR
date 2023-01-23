@@ -13,23 +13,23 @@ info_text = "❖MS VIDEO EDITOR❖\n\n✰ Owner Repo : @ms_dzulqurnain\n⇝ Chan
 
 help_text = """**❖MS VIDEO EDITOR❖**
 
-•`Encode` - Ubah resolusi video mu
+•Encode : Ubah resolusi video mu
 
-•`HEVC compress` - Mengubah resolusi burik
+•HEVC compress : Mengubah resolusi burik
 
-•`FAST compress` - Kompres dengan cepat & lebih efisien
+•FAST compress : Kompres dengan cepat & lebih efisien
 
-•`Convert` - Mengubah format/mengekstrak audio dari video mu
+•Convert : Mengubah format/mengekstrak audio dari video mu
 
-•`Rename` - rename any file, extension not required
+•Rename : Ganti nama file apa pun, ekstensi tidak diperlukan
 
-•`SSHOTS` - generate 10 screenshots of your video
+•SSHOTS : Buat 10 screenshot di video mu
 
-•`Trim` - cut your videos"""
+•Trim : Potong durasi video"""
 
-source_text = "**Deploy your own bot**"
+source_text = "**JOIN CHANNEL & GRUB SEBELUM MENGGUNAKAN SAYA**"
 
-DEV = "https://t.me/MaheshChauhan"
+DEV = "https://t.me/ms_dzulqurnain"
 
 spam_notice = "This bot is hosted on heroku, and hence can just run one process at a time.Spamming the bot or encoding adult videos will lead you to a ban."
 
