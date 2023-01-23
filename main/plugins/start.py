@@ -24,8 +24,8 @@ from LOCAL.localisation import info_text, spam_notice, help_text, DEV, source_te
 
 @Drone.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
-    await event.reply(f'{st}' source_text, 
-                      buttons=[
+    await event.reply(f'{st}', 
+                      buttons=[source_text,
                                [Button.url("JOIN CHANNEL", url="https://t.me/MSDEPLOY")]
                                [Button.inline("Menu", data="menu")]
                               ])
