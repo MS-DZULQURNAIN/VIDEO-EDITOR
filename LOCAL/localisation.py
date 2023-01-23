@@ -3,11 +3,11 @@
 
 START_TEXT = "Hallo @{username}\n\nSaya adalah MS VIDEO EDITOR!!!\nSaya bisa melakukan beberapa perintah editing video,Anda harus join channel saya sebelum menggunakan saya:v"
 
-FORCE_SUB_TEXT = "In order to use this bot, you've to join my parent channel."
+FORCE_SUB_TEXT = "Anda harus join channel saya sebelum menggunakan saya:v"
 
-CHANNEL_LINK = "https://t.me/DroneBots"
+CHANNEL_LINK = "https://t.me/MSDEPLOY"
 
-SUPPORT_LINK = "https://t.me/TeamDrone"
+SUPPORT_LINK = "https://t.me/MS_DZULQURNAIN_NET"
 
 info_text = "This bot is developed by @MaheshChauhan\n\nWritten in python library TELETHON.\n\nBot by : @DroneBots\nSupport : @TeamDrone\n\nV1.4"   
 
