@@ -31,7 +31,7 @@ source_text = "**JOIN CHANNEL & GRUB SEBELUM MENGGUNAKAN SAYA**"
 
 DEV = "https://t.me/ms_dzulqurnain"
 
-spam_notice = "This bot is hosted on heroku, and hence can just run one process at a time.Spamming the bot or encoding adult videos will lead you to a ban."
+spam_notice = "NGAPAIN DI PENCET?🧐"
 
 JPG = "LOCAL/video_convertor.jpg"
 
