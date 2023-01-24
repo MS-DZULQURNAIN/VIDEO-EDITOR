@@ -29,7 +29,7 @@ help_text = """**❖MS VIDEO EDITOR❖**
 
 source_text = "**JOIN CHANNEL & GRUB SEBELUM MENGGUNAKAN SAYA**"
 
-DEV = "https://t.me/ms_dzulqurnain"
+DEV = "https://t.me/MSDEPLOY"
 
 spam_notice = "NGAPAIN DI PENCET?🧐"
 
