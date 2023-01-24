@@ -45,7 +45,7 @@ async def help(event):
    
 @Drone.on(events.callbackquery.CallbackQuery(data="thumbnail"))
 async def thumbnail(event):
-    await event.edit(f'**👥HELP & SETTINGS**\n\n{thumbnail_text}',
+    await event.edit(f'**RULES THUMBNAIL😒**\n\n{thumbnail_text}',
                       buttons=[[
                                 Button.inline("PASANG THUMBNAIL", data="sett")],
                                 [
