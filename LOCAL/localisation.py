@@ -29,8 +29,6 @@ help_text = """**❖MS VIDEO EDITOR❖**
 
 source_text = "**JOIN CHANNEL & GRUB SEBELUM MENGGUNAKAN SAYA**"
 
-DEV = "https://t.me/MSDEPLOY"
-
 spam_notice = "NGAPAIN DI PENCET?🧐"
 
 JPG = "LOCAL/video_convertor.jpg"
