@@ -26,8 +26,8 @@ from LOCAL.localisation import info_text, spam_notice, help_text, source_text, S
 async def start(event):
     await event.reply(f'{st}', 
                       buttons=[
-                               [Button.url("CHANNEL", url="https://t.me/MSDEPLOY")]
-                               [Button.url("DEVELOPER ", url=" https://t.me/ms_dzulqurnain")]
+                                Button.url("CHANNEL", url="https://t.me/MSDEPLOY"),
+                                Button.url("DEVELOPER ", url=" https://t.me/ms_dzulqurnain")
                               ])
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} Memulai bot')
