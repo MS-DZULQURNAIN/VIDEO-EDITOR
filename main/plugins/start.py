@@ -35,7 +35,7 @@ async def start(event):
 async def menu(event):
     await vc_menu(event)
     
-@Drone.on(events.callbackquery.CallbackQuery(data="menu")
+@Drone.on(events.callbackquery.CallbackQuery(data="source")
 async def source(event):
      await event.edit(source_text,
                      buttons=[
