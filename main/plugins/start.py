@@ -25,10 +25,11 @@ from LOCAL.localisation import info_text, spam_notice, help_text, source_text, S
 @Drone.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
     await event.reply(f'{st}', 
-                      buttons=[[
-                                Button.url("CHANNEL", url="https://t.me/MSDEPLOY"),
-                                Button.url("DEVELOPER ", url="https://t.me/ms_dzulqurnain")
-                              ]])
+                      buttons=[[[
+                                Button.url("CHANNEL 1", url="https://t.me/MSDEPLOY"),
+                                Button.url("CHANNEL 2", url="https://t.me/MS_DZULQURNAIN_NET"),
+                                Buttom.url("DEVELOPER", url="https://t.me/ms_dzulqurnain")
+                              ]]])
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} Memulai bot')
 
