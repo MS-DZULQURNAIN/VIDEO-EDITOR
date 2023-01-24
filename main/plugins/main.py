@@ -35,7 +35,7 @@ from LOCAL.localisation import FORCE_SUB_BUTT, source_text, SUPPORT_LINK
 
 @Drone.on(events.callbackquery.CallbackQuery(data="forcesubtext"))
 async def forcesubtext(event):
-       await event.edit(f'Hallo\n\n{FORCE_SUB_BUTT}",
+       await event.edit("Hallo\n\n{FORCE_SUB_BUTT}",
                      buttons=[[
                                Button.url("CHANNEL 1", url="https://t.me/MSDEPLOY"],
                               [
