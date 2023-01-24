@@ -3,6 +3,8 @@
 
 START_TEXT = "Hallo Kamu😼\n\nSaya adalah MS VIDEO EDITOR!!!\nSaya bisa melakukan beberapa perintah editing video\n\nAnda harus join channel saya sebelum menggunakan saya:v"
 
+thumbnail_text = "HALLO TOD"
+
 FORCE_SUB_TEXT = "Anda harus join channel saya sebelum menggunakan saya:v"
 
 CHANNEL_LINK = "https://t.me/MSDEPLOY"
