@@ -34,6 +34,14 @@ from LOCAL.localisation import FORCE_SUB_BUTT, source_text, SUPPORT_LINK
 #Don't be a MF by stealing someone's hardwork.
 forcesubtext = {FORCE_SUB_BUTT}
 
+@Drone.on(evenst.callbackquery.CallbackQuery(data="forcesubtext"))
+async def forcesubtext(event):
+       await event.reply(f'{FORCE_SUB_BUTT}",
+                     buttons=[[
+                               Button.url("CHANNEL 1", url="https://t.me/MSDEPLOY"],
+                              [
+                               Button.url("CHANNEL 2", url="https://t.me/MS_DZULQURNAIN_NET"]]) 
+
 @Drone.on(events.NewMessage(incoming=True,func=lambda e: e.is_private))
 async def compin(event):
     db = Database(MONGODB_URI, 'videoconvertor')
