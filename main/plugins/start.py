@@ -35,7 +35,7 @@ async def start(event):
     await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} Memulai bot')
 
 @Drone.on(events.NewMessage(incoming=True, pattern="/thumbnail"))
-async def start(event):
+async def thumbnail(event):
     await event.reply(f'{thumb}',
                       buttons=[[
                                 Button.inline("PASANG THUMBNAIL", data="sett")],
