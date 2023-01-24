@@ -15,19 +15,16 @@ info_text = "❖MS VIDEO EDITOR❖\n\n✰ Owner Repo : @ms_dzulqurnain\n⇝ Chan
 
 help_text = """**❖MS VIDEO EDITOR❖**
 
-•Encode : Ubah resolusi video mu
+Apa itu¿?
+•Encode⇝Ubah resolusi video mu
+•HEVC compress⇝Mengubah resolusi burik
+•FAST compress⇝Kompres dengan cepat & lebih efisien
+•Convert⇝Mengubah format/mengekstrak audio dari video mu
+•Rename⇝Ganti nama file apa pun, ekstensi tidak diperlukan
+•SSHOTS⇝Buat 10 screenshot di video mu
+•Trim⇝Potong durasi video
 
-•HEVC compress : Mengubah resolusi burik
-
-•FAST compress : Kompres dengan cepat & lebih efisien
-
-•Convert : Mengubah format/mengekstrak audio dari video mu
-
-•Rename : Ganti nama file apa pun, ekstensi tidak diperlukan
-
-•SSHOTS : Buat 10 screenshot di video mu
-
-•Trim : Potong durasi video"""
+Kalau masih ga paham pahamin aja sendiri 🗿"""
 
 source_text = "**JOIN CHANNEL & GRUB SEBELUM MENGGUNAKAN SAYA**"
 
