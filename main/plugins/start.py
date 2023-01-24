@@ -33,10 +33,6 @@ async def start(event):
 
 @Drone.on(events.callbackquery.CallbackQuery(data="menu"))
 async def menu(event):
-    await vc_menu(event)
-    
-@Drone.on(events.callbackquery.CallbackQuery(data="source"))
-async def source(event):
     await event.edit(source_text,
                      buttons=[
                               [Button.url("CHANNEL 1", url="https://t.me/ms_dzulqurnain"), 
