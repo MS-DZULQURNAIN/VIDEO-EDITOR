@@ -36,7 +36,7 @@ async def start(event):
 
 @Drone.on(events.NewMessage(incoming=True, pattern="/thumbnail"))
 async def thumbnail(event):
-    await event.reply(f'{thumb}',
+    await event.edit(INFO THUMBNAIL\n\n{thumbnail_text}',
                       buttons=[[
                                 Button.inline("PASANG THUMBNAIL", data="sett")],
                                 [
