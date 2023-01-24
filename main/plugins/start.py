@@ -26,51 +26,13 @@ from LOCAL.localisation import info_text, spam_notice, help_text, source_text, S
 async def start(event):
     await event.reply(f'{st}', 
                       buttons=[
-                               [Button.inline("Menu", data="menu")]
+                               [Button.inline("CHANNEL", data="menu")]
                               ])
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
-    await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} started the BOT')
+    await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} Memulai bot')
 
-@Drone.on(events.callbackquery.CallbackQuery(data="menu"))
-async def menu(event):
-    await vc_menu(event)
-    
-@Drone.on(events.callbackquery.CallbackQuery(data="info"))
-async def info(event):
-    await event.edit(f'**INPO:**\n\n{info_text}',
-                    buttons=[[
-                         Button.inline("Menu", data="menu")]])
-    
-@Drone.on(events.callbackquery.CallbackQuery(data="notice"))
-async def notice(event):
-    await event.answer(f'{spam_notice}', alert=True)
-    
-@Drone.on(events.callbackquery.CallbackQuery(data="source"))
-async def source(event):
-    await event.edit(source_text,
-                    buttons=[[
-                         Button.url("JOIN CHANNEL 1", url="https://t.me/MSDEPLOY"),
-                         Button.url("JOIN CHANNEL 2 ", url="https://t.me/MS_DZULQURNAIN_NET")]])
-                         
+
                     
-@Drone.on(events.callbackquery.CallbackQuery(data="help"))
-async def help(event):
-    await event.edit('**👥HELP & SETTINGS**',
-                    buttons=[[
-                         Button.inline("PSG THUMB", data="sett"),
-                         Button.inline("HPS THUMB", data='remt')], 
-                         [
-                         Button.inline("PLUGINS", data="plugins"),
-                         Button.inline("RESTART", data="restart")], 
-                         [Button.url("SUPPORT", url=f"{SUPPORT_LINK}")],
-                         [
-                         Button.inline("BACK", data="menu")]])
-    
-@Drone.on(events.callbackquery.CallbackQuery(data="plugins"))
-async def plugins(event):
-    await event.edit(f'{help_text}',
-                    buttons=[[Button.inline("Menu.", data="menu")]])
-                   
  #-----------------------------------------------------------------------------------------------                            
     
 @Drone.on(events.callbackquery.CallbackQuery(data="sett"))
