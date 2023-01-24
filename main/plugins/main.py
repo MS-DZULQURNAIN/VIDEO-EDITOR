@@ -32,7 +32,7 @@ from main.plugins.ssgen import screenshot
 from LOCAL.localisation import FORCE_SUB_BUTT, source_text, SUPPORT_LINK
 
 #Don't be a MF by stealing someone's hardwork.
-forcesubtext = f'{FORCE_SUB_BUTT}
+forcesubtext = {FORCE_SUB_BUTT}
 
 @Drone.on(events.NewMessage(incoming=True,func=lambda e: e.is_private))
 async def compin(event):
