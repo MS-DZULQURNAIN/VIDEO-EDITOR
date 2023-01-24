@@ -34,9 +34,9 @@ async def start(event):
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} Memulai bot')
 
-@Drone.on(events.callbackquery.CallbackQuery(data="thumbnail"))
-async def thumbnail(event):
-    await event.edit(f'INFO THUMBNAIL\n\n{thumbnail_text}',
+@Drone.on(events.callbackquery.CallbackQuery(data="help"))
+async def help(event):
+    await event.edit('**👥HELP & SETTINGS**\n\n{thumbnail_text}',
                       buttons=[[
                                 Button.inline("PASANG THUMBNAIL", data="sett")],
                                 [
