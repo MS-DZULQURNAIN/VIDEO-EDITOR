@@ -36,16 +36,11 @@ async def start(event):
 
 @Drone.on(events.NewMessage(incoming=True, pattern="/help"))
 async def help(event):
-    await event.reply(f'HELP\n\n{thumbnail_text}', 
-                      buttons=[[Button.inline("THUMBNAIL", data="thumbnail")]])
-
-@Drone.on(events.callbackquery.CallbackQuery(data="help"))
-async def help(event):
-    await vc_help(event)
-   
-@Drone.on(events.callbackquery.CallbackQuery(data="thumbnail"))
+    await event.reply(f'{help_text}')
+    
+@Drone.on(events.NewMessage(incoming=True, pattern="/thumbnail"))
 async def thumbnail(event):
-    await event.edit(f'**RULES THUMBNAIL😒**\n\n{thumbnail_text}',
+    await event.reply(f'**RULES MEMASANG THUMBNAIL**{thumbnail_text}',
                       buttons=[[
                                 Button.inline("PASANG THUMBNAIL", data="sett")],
                                 [
