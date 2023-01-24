@@ -31,6 +31,10 @@ async def start(event):
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} Memulai bot')
 
+@Drone.on(events.callbackquery.CallbackQuery(data="menu"))
+async def menu(event):
+    await vc_menu(event)
+    
 @Drone.on(events.callbackquery.CallbackQuery(data="menu")
 async def source(event):
      await event.edit(source_text,
