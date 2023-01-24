@@ -3,7 +3,7 @@
 
 START_TEXT = "Hallo Kamu😼\n\nSaya adalah MS VIDEO EDITOR!!!\nSaya bisa melakukan beberapa perintah editing video\n\nAnda harus join channel saya sebelum menggunakan saya:v"
 
-thumbnail_text = "HALLO TOD"
+thumbnail_text = "Thumbnail hanya bisa dipasang dengan durasi video minimal 20 detik, Jika dibawah 20 detik makan thumbnail tidak akan terpasang otomatis🗿👌"
 
 FORCE_SUB_TEXT = "Anda harus join channel saya sebelum menggunakan saya:v"
 
