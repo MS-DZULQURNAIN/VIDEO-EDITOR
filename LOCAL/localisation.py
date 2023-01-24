@@ -5,7 +5,7 @@ START_TEXT = "**Hallo Kamu😼\n\nSaya adalah MS VIDEO EDITOR!!!**\n\nSaya bisa 
 
 thumbnail_text = "Thumbnail hanya bisa dipasang dengan durasi video minimal 20 detik, Jika dibawah 20 detik makan thumbnail tidak akan terpasang otomatis🗿👌"
 
-FORCE_SUB_TEXT = "Anda harus join channel saya sebelum menggunakan saya:v"
+FORCE_SUB_BUTT = "Hallo kamu😊\n\nSebelum menggunakan saya kamu wajib join channel & grub dibawah ini😇"
 
 CHANNEL_LINK = "https://t.me/MSDEPLOY"
 
