@@ -32,8 +32,6 @@ from main.plugins.ssgen import screenshot
 from LOCAL.localisation import FORCE_SUB_BUTT, source_text, SUPPORT_LINK
 
 #Don't be a MF by stealing someone's hardwork.
-forcesubtext = {FORCE_SUB_BUTT}
-
 @Drone.on(evenst.callbackquery.CallbackQuery(data="forcesubtext"))
 async def forcesubtext(event):
        await event.reply(f'{FORCE_SUB_BUTT}",
