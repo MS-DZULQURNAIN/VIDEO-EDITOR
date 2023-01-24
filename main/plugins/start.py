@@ -33,7 +33,7 @@ async def start(event):
 
 @Drone.on(events.callbackquery.CallbackQuery(data="menu"))
 async def menu(event):
-    await event.reply(data="menu"),
+    await event.edit(data="menu"),
                      buttons=[
                               [Button.url("CHANNEL 1", url="https://t.me/ms_dzulqurnain"), 
                               [Button.url("CHANNEL 2", url="https://t.me/MSDEPLOY")]
