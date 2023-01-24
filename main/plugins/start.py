@@ -31,8 +31,14 @@ async def start(event):
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} Memulai bot')
 
+@Drone.on(events.callbackquery.CallbackQuery(data="menu")
+async def menu(event):
+     await event.edit(menu_text,
+                     buttons=[
+                              [Button.url("CHANNEL 1", url="https://t.me/ms_dzulqurnain"), 
+                              [Button.url("CHANNEL 2", url="https://t.me/MSDEPLOY")]
+                             ]
 
-                    
  #-----------------------------------------------------------------------------------------------                            
     
 @Drone.on(events.callbackquery.CallbackQuery(data="sett"))
