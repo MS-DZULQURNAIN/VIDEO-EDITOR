@@ -29,10 +29,10 @@ from main.Database.database import Database
 from main.plugins.actions import force_sub
 from main.plugins.encoder import encode
 from main.plugins.ssgen import screenshot
-from LOCAL.localisation import source_text, SUPPORT_LINK
+from LOCAL.localisation import FORCE_SUB_BUTT, source_text, SUPPORT_LINK
 
 #Don't be a MF by stealing someone's hardwork.
-forcesubtext = f"
+forcesubtext = f'{FORCE_SUB_BUTT}
                             butt"
 
 @Drone.on(events.NewMessage(incoming=True,func=lambda e: e.is_private))
