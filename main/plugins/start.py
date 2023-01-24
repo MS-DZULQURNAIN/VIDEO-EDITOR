@@ -40,7 +40,7 @@ async def help(event):
     
 @Drone.on(events.NewMessage(incoming=True, pattern="/thumbnail"))
 async def thumbnail(event):
-    await event.reply(f'**RULES MEMASANG THUMBNAIL**{thumbnail_text}',
+    await event.reply(f'**RULES MEMASANG THUMBNAIL😒**\n\n{thumbnail_text}',
                       buttons=[[
                                 Button.inline("PASANG THUMBNAIL", data="sett")],
                                 [
