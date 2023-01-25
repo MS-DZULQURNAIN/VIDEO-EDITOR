@@ -29,7 +29,7 @@ from LOCAL.utils import ffmpeg_progress
 
 async def encode(event, msg, scale=0):
     ps_name = str(f"**{scale}p ENCODING:**")
-    _ps = str(f"{scale}p ENCODE")
+    _ps = str(f"{scale}p BERHASIL DI ENCODE")
     Drone = event.client
     edit = await Drone.send_message(event.chat_id, "Sedang Encoding...", reply_to=msg.id)
     new_name = "out_" + dt.now().isoformat("_", "seconds")
@@ -117,9 +117,9 @@ async def encode(event, msg, scale=0):
     os.rename(out, out2)
     i_size = os.path.getsize(name)
     f_size = os.path.getsize(out2)     
-    text = f'**{_ps}D by** : @{BOT_UN}'
+    text = f'**{_ps} dari** : @{BOT_UN}\n\n Owner : @ms_dzulqurnain👤'
     UT = time.time()
-    await log.edit("Uploading file")
+    await log.edit("Mengupload file")
     if 'x-matroska' in mime:
         try:
             uploader = await fast_upload(f'{out2}', f'{out2}', UT, Drone, edit, '**UPLOADING:**')
@@ -139,7 +139,7 @@ async def encode(event, msg, scale=0):
             await LOG_END(event, log_end_text)
             os.rmdir("encodemedia")
             print(e)
-            return await edit.edit(f"An error occured while uploading.\n\nContact [SUPPORT]({SUPPORT_LINK})", link_preview=False)
+            return await edit.edit(f"Terjadi kesalahan saat mengupload!\n\nContact [SUPPORT]({SUPPORT_LINK})", link_preview=False)
     else:
         metadata = video_metadata(out2)
         width = metadata["width"]
@@ -147,22 +147,22 @@ async def encode(event, msg, scale=0):
         duration = metadata["duration"]
         attributes = [DocumentAttributeVideo(duration=duration, w=width, h=height, supports_streaming=True)]
         try:
-            uploader = await fast_upload(f'{out2}', f'{out2}', UT, Drone, edit, '**UPLOADING:**')
+            uploader = await fast_upload(f'{out2}', f'{out2}', UT, Drone, edit, '**MENGUPLOAD:**')
             await Drone.send_file(event.chat_id, uploader, caption=text, thumb=JPG3, attributes=attributes, force_document=False)
         except Exception:
             try:
-                uploader = await fast_upload(f'{out2}', f'{out2}', UT, Drone, edit, '**UPLOADING:**')
+                uploader = await fast_upload(f'{out2}', f'{out2}', UT, Drone, edit, '**MENGUPLOAD:**')
                 await Drone.send_file(event.chat_id, uploader, caption=text, thumb=JPG, force_document=True)
             except Exception as e:
                 await log.delete()
                 await LOG_END(event, log_end_text)
                 os.rmdir("encodemedia")
                 print(e)
-                return await edit.edit(f"An error occured while uploading.\n\nContact [SUPPORT]({SUPPORT_LINK})", link_preview=False)
+                return await edit.edit(f"Terjadi kesalahan saat mengupload!\n\nContact [SUPPORT]({SUPPORT_LINK})", link_preview=False)
     await edit.delete()
     os.remove(name)
     os.remove(out2)
     await log.delete()
-    log_end_text2 = f'**{_ps} PROCESS FINISHED**\n\nTime Taken: {round((time.time()-DT)/60)} minutes\nInitial size: {i_size/1000000}mb.\nFinal size: {f_size/1000000}mb.\n\n[Bot is free now.]({SUPPORT_LINK})'
+    log_end_text2 = f'**{_ps} PROSES SELESAI**\n\nWaktu : {round((time.time()-DT)/60)} minutes\nUkuran awal: {i_size/1000000}mb.\nUkuran akhir: {f_size/1000000}mb.\n\n[Bot is free now.]({SUPPORT_LINK})'
     await LOG_END(event, log_end_text2)
     
