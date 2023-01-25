@@ -32,8 +32,15 @@ from main.plugins.ssgen import screenshot
 from LOCAL.localisation import FORCE_SUB_BUTT, source_text, SUPPORT_LINK
 
 #Don't be a MF by stealing someone's hardwork.
-forcesubtext = f"❌❌❌\n\nIni tidak akan berfungsi,silahkan ketik `/start` dan join channel sebelum menggunakan saya😏"
+FSUBTEXT = f"❌❌❌\n\nIni tidak akan berfungsi,silahkan ketik `/start` dan join channel sebelum menggunakan saya😏"
                 
+@Drone.on(events.callbackquery.CallbackQuery(data="forcesubtext"))
+async def forcesubtext(event):
+    await event.edit("{FSUBTEXT}",
+                          buttons=[
+                                    [Button.url("JOIN", url="https://t.me/rodokgeting")]
+                                  ]) 
+  
 @Drone.on(events.NewMessage(incoming=True,func=lambda e: e.is_private))
 async def compin(event):
     db = Database(MONGODB_URI, 'videoconvertor')
