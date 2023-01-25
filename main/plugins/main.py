@@ -284,7 +284,7 @@ async def fcomp(event):
         timer.pop(int(timer.index(f'{now}')))
         process1.pop(int(process1.index(f'{event.sender_id}')))
     else:
-        await event.edit(f"Another process in progress!\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
+        await event.edit(f"Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
                        
 @Drone.on(events.callbackquery.CallbackQuery(data="hcomp"))
 async def hcomp(event):
@@ -460,7 +460,7 @@ async def vtrim(event):
     markup = event.client.build_reply_markup(Button.force_reply())
     async with Drone.conversation(event.chat_id) as conv: 
         try:
-            xx = await conv.send_message("send me the start time of the video you want to trim from as a reply to this. \n\nIn format hh:mm:ss , for eg: `01:20:69` ", buttons=markup)
+            xx = await conv.send_message("Kirim saya detik/menit PERTAMA dengan reply pesan ini. \n\nDalam format jam:menit:detik\n\nCONTOH DURASI JAM: `01:00:00`\n\nCONTOH DURASI MENIT: `00:01:00`\n\nCONTOH DURASI DETIK: `00:00:10", buttons=markup)
             x = await conv.get_reply()
             st = x.text
             await xx.delete()                    
