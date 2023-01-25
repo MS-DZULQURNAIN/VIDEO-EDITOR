@@ -48,14 +48,14 @@ async def compin(event):
                 return await event.reply(f'you are Banned to use me!\n\ncontact [SUPPORT]({SUPPORT_LINK})', link_preview=False)
             video = event.file.mime_type
             if 'video' in video:
-                await event.reply("📽",
+                await event.reply("**MS EDIT VIDEO📽🎞**",
                             buttons=[
-                                [Button.inline("ENCODE", data="encode"),
-                                 Button.inline("COMPRESS", data="compress")],
-                                [Button.inline("CONVERT", data="convert"),
-                                 Button.inline("RENAME", data="rename")],
-                                [Button.inline("SSHOTS", data="sshots"),
-                                 Button.inline("TRIM", data="trim")]
+                                [Button.inline("ENCODE", data="encode")],
+                                [Button.inline("COMPRESS", data="compress")],
+                                [Button.inline("CONVERT", data="convert")],
+                                [Button.inline("RENAME", data="rename")],
+                                [Button.inline("SSHOTS", data="sshots")],
+                                [Button.inline("TRIM", data="trim")]
                             ])
             elif 'png' in video:
                 return
