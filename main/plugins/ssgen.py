@@ -63,7 +63,7 @@ async def screenshot(event, msg):
         await fast_download(name, file, Drone, edit, time.time(), "**MENDOWNLOAD:**")
     except Exception as e:
         print(e)
-        return await edit.edit(f"An error occured while downloading.") 
+        return await edit.edit(f"Terjadi kesalahan saat mendownload") 
     pictures = []
     captions = []
     n = [8, 7, 6, 5, 4, 3, 2, 1.5, 1.25, 1.10]
