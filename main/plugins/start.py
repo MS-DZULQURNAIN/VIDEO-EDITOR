@@ -46,7 +46,7 @@ async def thumbnail(event):
   
 @Drone.on(events.NewMessage(incoming=True, pattern="/join"))
 async def join(event):
-    await event.reply(f'SILAHKAH JOIN SEMUA CHANNEL DIBAWAH INI UNTUK MENGGUNAKAN SAYA😉\n\nJika sudah silahkan kirim ulang video nya😁", 
+    await event.reply("SILAHKAH JOIN SEMUA CHANNEL DIBAWAH INI UNTUK MENGGUNAKAN SAYA😉\n\n Jika sudah silahkan kirim ulang video nya😁", 
                       buttons=[[
                                 Button.url("CHANNEL 1", url="https://t.me/MSDEPLOY")],
                                 [
