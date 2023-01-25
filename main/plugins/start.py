@@ -87,4 +87,4 @@ async def res(event):
     elif result is False:
         await event.edit("Terjadi kesalahan🗿")
     elif result is True:
-        await event.edit("Sedang merestart app, tunggu beberapa menit)
+        await event.edit("Sedang merestart app, tunggu beberapa menit")
