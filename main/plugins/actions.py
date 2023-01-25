@@ -49,25 +49,25 @@ async def force_sub(id):
 
 async def set_thumbnail(event, img):
     db = Database(MONGODB_URI, 'videoconvertor')
-    edit = await event.client.send_message(event.chat_id, 'Trying to process.')
+    edit = await event.client.send_message(event.chat_id, 'Sedang memasang thumbnail...')
     try:
         path = await event.client.download_media(img)
         meta = upload_file(path)
         link = f'https://telegra.ph{meta[0]}'
     except Exception as e:
         print(e)
-        return await edit.edit("Failed to Upload on Tgraph.")
+        return await edit.edit("Gagal mengupload ke telegraph")
     await db.update_thumb_link(event.sender_id, link)
-    await edit.edit("Done!")
+    await edit.edit("Selesai! silahkan kirim video untuk memulai mengedit")
     
 async def rem_thumbnail(event):
     db = Database(MONGODB_URI, 'videoconvertor')
-    edit = await event.client.send_message(event.chat_id, 'Trying.')
+    edit = await event.client.send_message(event.chat_id, 'Sedang menghapus thumbnail...')
     T = await db.get_thumb(event.sender_id)
     if T is None:
-        return await edit.edit('No thumbnail saved!')
+        return await edit.edit('Tidak ada thumbnail yg terpasang😒')
     await db.rem_thumb_link(event.sender_id)
-    await edit.edit('Removed!')
+    await edit.edit('Thumbnail terhapus! ketik `/thumbnail` untuk memasang thumbnail kembali:v)
     
 #Heroku--------------------------------------------------------------------------------------------------------------
    
@@ -111,12 +111,12 @@ async def LOG_END(event, ps_name):
 async def msg(event):
     ok = await event.get_reply_message()
     if not ok:
-        await event.reply("Reply to the message you want to send!")
+        await event.reply("Reply pesan yg ingin di kirim!")
     user = event.pattern_match.group(1)
     if not user:
-        await event.reply("Give the user id you want me to send message. ")
+        await event.reply("Kasih id pengguna untuk mengirim pesan!")
     await Drone.send_message(int(user) , ok )
-    await event.reply("Messsage sent.")
+    await event.reply("Pesan terkirim🛵")
     
 #Listing--------------------------------------------------------------------------------------------------------------
 
