@@ -460,17 +460,17 @@ async def vtrim(event):
     markup = event.client.build_reply_markup(Button.force_reply())
     async with Drone.conversation(event.chat_id) as conv: 
         try:
-            xx = await conv.send_message("Kirim saya detik/menit PERTAMA dengan reply pesan ini. \n\nDalam format jam:menit:detik\n\nCONTOH DURASI JAM: `01:00:00`\n\nCONTOH DURASI MENIT: `00:01:00`\n\nCONTOH DURASI DETIK: `00:00:10", buttons=markup)
+            xx = await conv.send_message("Kirim saya jam/menit/detik PERTAMA dengan reply pesan ini. \n\n**Dalam format jam:menit:detik**\n\nCONTOH DURASI JAM: `01:00:00`\nCONTOH DURASI MENIT: `00:01:00`\nCONTOH DURASI DETIK: `00:00:10", buttons=markup)
             x = await conv.get_reply()
             st = x.text
             await xx.delete()                    
             if not st:               
-                return await xx.edit("No response found.")
+                return await xx.edit("Respon tidak tersedia")
         except Exception as e: 
             print(e)
-            return await xx.edit("An error occured while waiting for the response.")
+            return await xx.edit("Terjadi kesalahan saat menunggu respons")
         try:
-            xy = await conv.send_message("send me the end time of the video you want to trim till as a reply to this.  \n\nIn format hh:mm:ss , for eg: `01:20:69` ", buttons=markup)
+            xy = await conv.send_message("Kirim saya jam/menit/detik TERAKHIR dengan reply pesan ini.  \n\n**Dalam format jam:menit:detik**\n\nCONTOH DURASI JAM: `03:00:00`\nCONTOH DURASI MENIT: `00:05:00`\nCONTOH DURASI DETIK: `00:00:30" ", buttons=markup)
             y = await conv.get_reply()
             et = y.text
             await xy.delete()                    
