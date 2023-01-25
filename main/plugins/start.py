@@ -26,7 +26,7 @@ from LOCAL.localisation import join_text, thumbnail_text, info_text, spam_notice
 async def start(event):
     await event.reply(f'{st}', 
                       buttons=[
-                                Button.url("DEVELOPER", url="https://t.me/ms_dzulqurnain")
+                                Button.url("DEVELOPER👤", url="https://t.me/ms_dzulqurnain")
                               ]) 
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     await Drone.send_message(int(ACCESS_CHANNEL), f'@{tag} Memulai bot')
@@ -39,9 +39,9 @@ async def help(event):
 async def thumbnail(event):
     await event.reply(f'**RULES MEMASANG THUMBNAIL😒**\n\n{thumbnail_text}',
                       buttons=[[
-                                Button.inline("PASANG THUMBNAIL", data="sett")],
+                                Button.inline("PASANG THUMBNAIL🖼", data="sett")],
                                 [
-                                Button.inline("HAPUS THUMBNAIL", data="remt")
+                                Button.inline("HAPUS THUMBNAIL🗑", data="remt")
                               ]])
   
 @Drone.on(events.NewMessage(incoming=True, pattern="/join"))
