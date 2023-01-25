@@ -79,7 +79,7 @@ async def _encode(event):
                          Button.inline("720p", data="720")],
                         [Button.inline("x264", data="264"),
                          Button.inline("x265", data="265")],
-                        [Button.inline("BACK", data="back")]])
+                        [Button.inline("KEMBALI", data="back")]])
      
 @Drone.on(events.callbackquery.CallbackQuery(data="compress"))
 async def _compress(event):
@@ -87,7 +87,7 @@ async def _compress(event):
                     buttons=[
                         [Button.inline("HEVC COMPRESS", data="hcomp"),
                          Button.inline("FAST COMPRESS", data="fcomp")],
-                        [Button.inline("BACK", data="back")]])
+                        [Button.inline("KEMBALI", data="back")]])
 
 @Drone.on(events.callbackquery.CallbackQuery(data="convert"))
 async def convert(event):
@@ -103,17 +103,19 @@ async def convert(event):
                          Button.inline("MKV", data="mkv")],
                         [Button.inline("FILE", data="file"),
                          Button.inline("VIDEO", data="video")],
-                        [Button.inline("BACK", data="back")]])
+                        [Button.inline("KEMBALI", data="back")]])
                         
 @Drone.on(events.callbackquery.CallbackQuery(data="back"))
 async def back(event):
-    await event.edit("📽", buttons=[
-                    [Button.inline("ENCODE", data="encode"),
-                     Button.inline("COMPRESS", data="compress")],
-                    [Button.inline("CONVERT", data="convert"),
-                     Button.inline("RENAME", data="rename")],
-                    [Button.inline("SSHOTS", data="sshots"),
-                     Button.inline("TRIM", data="trim")]])
+    await event.edit("**MS VIDEO EDITOR📽🎞**\n\nBot hanya bisa di akses 1 pengguna di 1 waktu,Jika kamu spam maka akan otomatis **KEBANNED**😏",
+                       buttons=[
+                                [Button.inline("ENCODE", data="encode")],
+                                [Button.inline("KOMPRES UKURAN📉", data="compress")],
+                                [Button.inline("CONVERT FORMAT🔀", data="convert")],
+                                [Button.inline("UBAH NAMA📝", data="rename")],
+                                [Button.inline("SCREENSHOT📸", data="sshots")],
+                                [Button.inline("POTONG VIDEO✂", data="trim")]
+                               ])
     
 #-----------------------------------------------------------------------------------------
 
