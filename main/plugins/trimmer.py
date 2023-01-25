@@ -66,7 +66,7 @@ async def trim(event, msg, st, et):
         print(e)
         return await edit.edit(f"Terjadi kesalahan saat memotong!\n\nContact [SUPPORT]({SUPPORT_LINK})", link_preview=False)
     UT = time.time()
-    text = f"TELAH TERPOTONG dari: @{BOT_UN}\n\n Owner : @ms_dzulqurnain👤"
+    text = f"TELAH TERPOTONG dari: {BOT_UN}\n\n Owner : @ms_dzulqurnain👤"
     try:
         metadata = video_metadata(out2)
         width = metadata["width"]
