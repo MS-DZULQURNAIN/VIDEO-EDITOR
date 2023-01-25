@@ -108,7 +108,7 @@ async def media_rename(event, msg, new_name):
                 print(e)
                 return
     try:  
-        await fast_download(name, file, Drone, edit, DT, "**DOWNLOADING:**")
+        await fast_download(name, file, Drone, edit, DT, "**MENDOWNLOAD:**")
     except Exception as e:
         await edit.edit(f"Terjadi kesalahan saat mendownload!\n\nContact [SUPPORT]({SUPPORT_LINK})", link_preview=False)
         print(e)
