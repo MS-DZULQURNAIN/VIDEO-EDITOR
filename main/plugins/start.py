@@ -20,7 +20,7 @@ from .. import Drone, ACCESS_CHANNEL, AUTH_USERS
 
 from main.plugins.actions import set_thumbnail, rem_thumbnail, heroku_restart
 from LOCAL.localisation import START_TEXT as st
-from LOCAL.localisation import thumbnail_text, info_text, spam_notice, help_text, source_text, SUPPORT_LINK
+from LOCAL.localisation import join_text, thumbnail_text, info_text, spam_notice, help_text, source_text, SUPPORT_LINK
 
 @Drone.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
@@ -46,7 +46,7 @@ async def thumbnail(event):
   
 @Drone.on(events.NewMessage(incoming=True, pattern="/join"))
 async def join(event):
-    await event.reply("SILAHKAH JOIN SEMUA CHANNEL DIBAWAH INI UNTUK MENGGUNAKAN SAYA😉\n\n Jika sudah silahkan kirim ulang video nya😁", 
+    await event.reply(f'{join_text}', 
                       buttons=[[
                                 Button.url("CHANNEL 1", url="https://t.me/MSDEPLOY")],
                                 [
