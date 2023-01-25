@@ -104,7 +104,7 @@ async def media_rename(event, msg, new_name):
                 net_time = round(DT - UT)
                 await Drone.send_file(event.chat_id, uploader, caption=f"TELAH TERUBAH NAMA dari : {BOT_UN}\n\nTotal time:{net_time} seconds.", thumb=THUMB, force_document=True)
             except Exception as e:
-                await edit.edit(f"An error occured.\n\nContact [SUPPORT]({SUPPORT_LINK})", link_preview=False)
+                await edit.edit(f"Terjadi kesalahan saat mengupload\n\nContact [SUPPORT]({SUPPORT_LINK})", link_preview=False)
                 print(e)
                 return
     try:  
