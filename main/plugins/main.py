@@ -470,7 +470,7 @@ async def vtrim(event):
             print(e)
             return await xx.edit("Terjadi kesalahan saat menunggu respons")
         try:
-            xy = await conv.send_message("Kirim saya jam/menit/detik TERAKHIR dengan reply pesan ini.  \n\n**Dalam format jam:menit:detik**\n\nCONTOH DURASI JAM: `03:00:00`\nCONTOH DURASI MENIT: `00:05:00`\nCONTOH DURASI DETIK: `00:00:30" ", buttons=markup)
+            xy = await conv.send_message("Kirim saya jam/menit/detik TERAKHIR dengan reply pesan ini.  \n\n**Dalam format jam:menit:detik**\n\nCONTOH DURASI JAM: `03:00:00`\nCONTOH DURASI MENIT: `00:05:00`\nCONTOH DURASI DETIK: `00:00:30` ", buttons=markup)
             y = await conv.get_reply()
             et = y.text
             await xy.delete()                    
