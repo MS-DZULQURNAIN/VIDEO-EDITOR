@@ -127,7 +127,7 @@ async def set_timer(event, list1, list2):
     now = time.time()
     list2.append(f'{now}')
     list1.append(f'{event.sender_id}')
-    await event.client.send_message(event.chat_id, 'Kamu bisa mengedit lagi setelah 5 menit')
+    await event.client.send_message(event.chat_id, 'Kamu bisa mengedit lagi setelah 5 menit🤣')
     await asyncio.sleep(300)
     list2.pop(int(timer.index(f'{now}')))
     list1.pop(int(process1.index(f'{event.sender_id}')))
@@ -247,16 +247,16 @@ async def rename(event):
     await event.delete()
     markup = event.client.build_reply_markup(Button.force_reply())
     async with Drone.conversation(event.chat_id) as conv: 
-        cm = await conv.send_message("Send me a new name for the file as a `reply` to this message.\n\n**NOTE:** `.ext` is not required.", buttons=markup)                              
+        cm = await conv.send_message("Kirim saya nama baru untuk file dengan reply pesan ini!\n\n**CONTOH:** kamu nanyaa,kamu bertanya tanya🗿", buttons=markup)                              
         try:
             m = await conv.get_reply()
             new_name = m.text
             await cm.delete()                    
             if not m:                
-                return await cm.edit("No response found.")
+                return await cm.edit("Respon tidak tersedia")
         except Exception as e: 
             print(e)
-            return await cm.edit("An error occured while waiting for the response.")
+            return await cm.edit("Terjadi kesalahan saat menunggu respons")
     await media_rename(event, msg, new_name)  
     
 @Drone.on(events.callbackquery.CallbackQuery(data="fcomp"))
@@ -268,7 +268,7 @@ async def fcomp(event):
         index = process1.index(f'{event.sender_id}')
         last = timer[int(index)]
         present = time.time()
-        return await event.answer(f"You have to wait {300-round(present-float(last))} seconds more to start a new process!", alert=True)
+        return await event.answer(f"Tunggu {300-round(present-float(last))} detik untuk mengedit lagi🙃", alert=True)
     button = await event.get_message()
     msg = await button.get_reply_message()
     if not os.path.isdir("encodemedia"):
@@ -279,7 +279,7 @@ async def fcomp(event):
         now = time.time()
         timer.append(f'{now}')
         process1.append(f'{event.sender_id}')
-        await event.client.send_message(event.chat_id, 'You can start a new process again after 5 minutes.')
+        await event.client.send_message(event.chat_id, 'Kamu bisa mengedit lagi setelah 5 menit🤣')
         await asyncio.sleep(300)
         timer.pop(int(timer.index(f'{now}')))
         process1.pop(int(process1.index(f'{event.sender_id}')))
@@ -295,7 +295,7 @@ async def hcomp(event):
         index = process1.index(f'{event.sender_id}')
         last = timer[int(index)]
         present = time.time()
-        return await event.answer(f"You have to wait {300-round(present-float(last))} seconds more to start a new process!", alert=True)
+        return await event.answer(f"Tunggu {300-round(present-float(last))} detik untuk mengedit lagi🙃", alert=True)
     button = await event.get_message()
     msg = await button.get_reply_message()
     if not os.path.isdir("encodemedia"):
@@ -306,12 +306,12 @@ async def hcomp(event):
         now = time.time()
         timer.append(f'{now}')
         process1.append(f'{event.sender_id}')
-        await event.client.send_message(event.chat_id, 'You can start a new process again after 5 minutes.')
+        await event.client.send_message(event.chat_id, 'Kamu bisa mengedit lagi setelah 5 menit🤣')
         await asyncio.sleep(300)
         timer.pop(int(timer.index(f'{now}')))
         process1.pop(int(process1.index(f'{event.sender_id}')))
     else:
-        await event.edit(f"Another process in progress!\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
+        await event.edit(f"Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
 
 @Drone.on(events.callbackquery.CallbackQuery(data="264"))
 async def _264(event):
@@ -330,7 +330,7 @@ async def _264(event):
         os.rmdir("encodemedia")
         await set_timer(event, process1, timer) 
     else:
-        await event.edit(f"Another process in progress!\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
+        await event.edit(f"Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
       
 @Drone.on(events.callbackquery.CallbackQuery(data="265"))
 async def _265(event):
@@ -349,7 +349,7 @@ async def _265(event):
         os.rmdir("encodemedia")
         await set_timer(event, process1, timer) 
     else:
-        await event.edit(f"Another process in progress!\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
+        await event.edit(f"Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
         
 @Drone.on(events.callbackquery.CallbackQuery(data="240"))
 async def _240(event):
@@ -368,7 +368,7 @@ async def _240(event):
         os.rmdir("encodemedia")
         await set_timer(event, process1, timer) 
     else:
-        await event.edit(f"Another process in progress!\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
+        await event.edit(f"Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
         
 @Drone.on(events.callbackquery.CallbackQuery(data="360"))
 async def _360(event):
@@ -387,7 +387,7 @@ async def _360(event):
         os.rmdir("encodemedia")
         await set_timer(event, process1, timer) 
     else:
-        await event.edit(f"Another process in progress!\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
+        await event.edit(f"Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
         
 @Drone.on(events.callbackquery.CallbackQuery(data="480"))
 async def _480(event):
@@ -406,7 +406,7 @@ async def _480(event):
         os.rmdir("encodemedia")
         await set_timer(event, process1, timer) 
     else:
-        await event.edit(f"Another process in progress!\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
+        await event.edit(f"Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
         
 @Drone.on(events.callbackquery.CallbackQuery(data="720"))
 async def _720(event):
@@ -425,7 +425,7 @@ async def _720(event):
         os.rmdir("encodemedia")
         await set_timer(event, process1, timer) 
     else:
-        await event.edit(f"Another process in progress!\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
+        await event.edit(f"Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
           
 @Drone.on(events.callbackquery.CallbackQuery(data="sshots"))
 async def ss_(event):
@@ -436,7 +436,7 @@ async def ss_(event):
         index = process1.index(f'{event.sender_id}')
         last = timer[int(index)]
         present = time.time()
-        return await event.answer(f"You have to wait {120-round(present-float(last))} seconds more to start a new process!", alert=True)
+        return await event.answer(f"Tunggu {120-round(present-float(last))} detik untuk mengedit lagi 🙃", alert=True)
     button = await event.get_message()
     msg = await button.get_reply_message()
     await event.delete()
@@ -444,7 +444,7 @@ async def ss_(event):
     now = time.time()
     timer.append(f'{now}')
     process1.append(f'{event.sender_id}')
-    await event.client.send_message(event.chat_id, 'You can start a new process again after 2 minutes.')
+    await event.client.send_message(event.chat_id, 'Kamu bisa mengedit lagi setelah 2 menit🤗')
     await asyncio.sleep(120)
     timer.pop(int(timer.index(f'{now}')))
     process1.pop(int(process1.index(f'{event.sender_id}')))
