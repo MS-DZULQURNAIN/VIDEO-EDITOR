@@ -53,7 +53,7 @@ async def trim(event, msg, st, et):
         out = new_name + ext
     DT = time.time()
     try:
-        await fast_download(name, file, Drone, edit, DT, "**DOWNLOAD:**")
+        await fast_download(name, file, Drone, edit, DT, "**MENDOWNLOAD:**")
     except Exception as e:
         print(e)
         return await edit.edit(f"Terjadi kesalahan saat mendownload!\n\nContact [SUPPORT]({SUPPORT_LINK})", link_preview=False) 
