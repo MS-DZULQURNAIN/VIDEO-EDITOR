@@ -475,8 +475,8 @@ async def vtrim(event):
             et = y.text
             await xy.delete()                    
             if not et:                
-                return await xy.edit("No response found.")
+                return await xy.edit("Respon tidak tersedia")
         except Exception as e: 
             print(e)
-            return await xy.edit("An error occured while waiting for the response.")
+            return await xy.edit("Terjadi kesalahan saat menunggu respons")
         await trim(event, msg, st, et)
