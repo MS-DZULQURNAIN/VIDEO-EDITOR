@@ -163,6 +163,6 @@ async def encode(event, msg, scale=0):
     os.remove(name)
     os.remove(out2)
     await log.delete()
-    log_end_text2 = f'**{_ps} PROSES SELESAI**\n\nWaktu : {round((time.time()-DT)/60)} minutes\nUkuran awal: {i_size/1000000}mb.\nUkuran akhir: {f_size/1000000}mb.\n\n[Bot is free now.]({SUPPORT_LINK})'
+    log_end_text2 = f'**{_ps} PROSES SELESAI**\n\nWaktu : {round((time.time()-DT)/60)} menit\nUkuran awal: {i_size/1000000}mb.\nUkuran akhir: {f_size/1000000}mb.\n\n Owner : @ms_dzulqurnain👤[Bot is free now.]({SUPPORT_LINK})'
     await LOG_END(event, log_end_text2)
     
