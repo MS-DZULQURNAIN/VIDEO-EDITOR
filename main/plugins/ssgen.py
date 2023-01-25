@@ -52,7 +52,7 @@ async def ssgen(video, time_stamp):
 async def screenshot(event, msg):
     Drone = event.client
     name = dt.now().isoformat("_", "seconds") + ".mp4"
-    edit = await Drone.send_message(event.chat_id, "Trying to process.", reply_to=msg.id)
+    edit = await Drone.send_message(event.chat_id, "Sedang screenshot...", reply_to=msg.id)
     if hasattr(msg.media, "document"):
         file = msg.media.document
     else:
