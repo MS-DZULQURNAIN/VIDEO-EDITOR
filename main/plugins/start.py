@@ -29,7 +29,7 @@ async def start(event):
                                 Button.url("DEVELOPER👤", url="https://t.me/ms_dzulqurnain")
                               ]) 
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
-    await Drone.send_message(int(ACCESS_CHANNEL), f'@{tag}{id} Memulai bot')
+    await Drone.send_message(int(ACCESS_CHANNEL), f'@{tag} Memulai bot\n\n id : `{sender_id}`')
 
 @Drone.on(events.NewMessage(incoming=True, pattern="/help"))
 async def help(event):
