@@ -64,8 +64,8 @@ async def mp3(event, msg):
         return await edit.edit(f"Terjadi kesalahan saat mengconvert!\n\nContact [SUPPORT]({SUPPORT_LINK})")
     try:
         UT = time.time()
-        uploader = await fast_upload(f'{out}.mp3', f'{out}.mp3', UT, Drone, edit, '**UPLOADING:**')
-        await Drone.send_file(event.chat_id, uploader, thumb=JPG, caption=f'**AUDIO EXTRACTED by** : @{BOT_UN}', force_document=True)
+        uploader = await fast_upload(f'{out}.mp3', f'{out}.mp3', UT, Drone, edit, '**MENGUPLOAD:**')
+        await Drone.send_file(event.chat_id, uploader, thumb=JPG, caption=f'AUDIO TERCONVERT dari: @{BOT_UN}\n\n Owner : @ms_dzulqurnain👤', force_document=True)
     except Exception as e:
         os.rmdir("audioconvert")
         print(e)
