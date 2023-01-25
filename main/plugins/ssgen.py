@@ -73,7 +73,7 @@ async def screenshot(event, msg):
         if sshot is not None:
             pictures.append(sshot)
             captions.append(f'screenshot at {hhmmss(duration/n[i])}')
-            await edit.edit(f"`{i+1}` telah terscreenshot")
+            await edit.edit(f"`{i+1}` Telah terscreenshot")
     if len(pictures) > 0:
         await Drone.send_file(event.chat_id, pictures, caption=captions)
     else:
