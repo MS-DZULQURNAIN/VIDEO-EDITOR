@@ -460,7 +460,7 @@ async def vtrim(event):
     markup = event.client.build_reply_markup(Button.force_reply())
     async with Drone.conversation(event.chat_id) as conv: 
         try:
-            xx = await conv.send_message("Kirim saya jam/menit/detik PERTAMA dengan reply pesan ini. \n\n**Dalam format jam:menit:detik**\n\nCONTOH DURASI JAM: `01:00:00`\nCONTOH DURASI MENIT: `00:01:00`\nCONTOH DURASI DETIK: `00:00:10", buttons=markup)
+            xx = await conv.send_message("Kirim saya jam/menit/detik PERTAMA dengan reply pesan ini. \n\n**Dalam format jam:menit:detik**\n\nCONTOH DURASI JAM: `01:00:00`\nCONTOH DURASI MENIT: `00:01:00`\nCONTOH DURASI DETIK: `00:00:10` ", buttons=markup)
             x = await conv.get_reply()
             st = x.text
             await xx.delete()                    
