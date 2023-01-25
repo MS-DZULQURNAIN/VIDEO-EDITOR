@@ -36,7 +36,7 @@ FSUBTEXT = f"❌❌❌\n\nIni tidak akan berfungsi,silahkan ketik `/start` dan j
                 
 @Drone.on(events.callbackquery.CallbackQuery(data="forcesubtext"))
 async def forcesubtext(event):
-    await event.edit(f'{FSUBTEXT}",
+    await event.edit(f'info:\n\n{FSUBTEXT}",
                           buttons=[
                                     [Button.url("JOIN", url="https://t.me/rodokgeting")]
                                   ]) 
