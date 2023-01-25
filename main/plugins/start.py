@@ -80,11 +80,11 @@ async def remt(event):
 @Drone.on(events.callbackquery.CallbackQuery(data="restart"))
 async def res(event):
     if not f'{event.sender_id}' == f'{int(AUTH_USERS)}':
-        return await event.edit("Hanya pengguna spesial yg dapat merestart")
+        return await event.edit("Hanya admin yg dapat merestart")
     result = await heroku_restart()
     if result is None:
-        await event.edit("You have not filled `HEROKU_API` and `HEROKU_APP_NAME` vars.")
+        await event.edit("Kamu belum mengisi `HEROKU_API` dan `HEROKU_APP_NAME` vars.")
     elif result is False:
-        await event.edit("An error occured!")
+        await event.edit("Terjadi kesalahan🗿")
     elif result is True:
-        await event.edit("Restarting app, wait for a minute.")
+        await event.edit("Sedang merestart app, tunggu beberapa menit)
