@@ -28,18 +28,18 @@ async def incomming(event):
     if not await db.is_user_exist(event.sender_id):
         await db.add_user(event.sender_id)
 
-@Drone.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="/users"))
-async def users(event):
+@Drone.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="/pengguna"))
+async def pengguna(event):
     xx = await event.reply("Menghitung total pengguna di Database...")
     x = await db.total_users_count()
     await xx.edit(f"Total pengguna(s) {int(x)}")
 
-@Drone.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="/bcast"))
-async def bcast(event):
+@Drone.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="/broadcast"))
+async def broadcast(event):
     ids = []
     msg = await event.get_reply_message()
     if not msg:
-        await event.reply("reply pesan ini untuk broadcast!")
+        await event.reply("reply pesan untuk broadcast!")
     xx = await event.reply("Menghitung total pengguna di Database...")
     x = await db.total_users_count()
     await xx.edit(f"Total pengguna(s) {int(x)}")
@@ -80,8 +80,8 @@ async def bcast(event):
                      [Button.inline(f"GAGAL: {len(failed)}", data="none")]])
     
     
-@Drone.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="^/disallow (.*)" ))
-async def bban(event):
+@Drone.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="^/banned (.*)" ))
+async def banned(event):
     c = event.pattern_match.group(1)
     if not c:
         await event.reply("Banned siapa!?")
@@ -98,8 +98,8 @@ async def bban(event):
         await event.reply(f"{c} sekarang dibanned")
     admins.remove(f'{int(AUTH)}')
     
-@Drone.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="^/allowed (.*)" ))
-async def unbban(event):
+@Drone.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="^/unbanned (.*)" ))
+async def unbanned(event):
     xx = event.pattern_match.group(1)
     if not xx:
         await event.reply("Unbanned siapa?")
