@@ -25,12 +25,9 @@ from LOCAL.localisation import thumbnail_text, info_text, spam_notice, help_text
 @Drone.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
     await event.reply(f'{st}', 
-                      buttons=[[
-                                Button.url("CHANNEL 1", url="https://t.me/MSDEPLOY"),
-                                Button.url("CHANNEL 2", url="https://t.me/MS_DZULQURNAIN_NET")],
-                                [
+                      buttons=[
                                 Button.url("DEVELOPER", url="https://t.me/ms_dzulqurnain")
-                              ]]) 
+                              ]) 
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} Memulai bot')
 
@@ -46,6 +43,14 @@ async def thumbnail(event):
                                 [
                                 Button.inline("HAPUS THUMBNAIL", data="remt")
                               ]])
+  
+@Drone.on(events.NewMessage(incoming=True, pattern="/join"))
+async def join(event):
+    await event.reply(f'SILAHKAH JOIN SEMUA CHANNEL DIBAWAH INI UNTUK MENGGUNAKAN SAYA😉\n\nJika sudah silahkan kirim ulang video nya😁", 
+                      buttons=[
+                               [Button.url("CHANNEL 1", url="https://t.me/MSDEPLOY")],
+                               [Button.url("CHANNEL 2", url="https://t.me/ms_dzulqurnain)]
+                              ]) 
  #-----------------------------------------------------------------------------------------------                            
     
 @Drone.on(events.callbackquery.CallbackQuery(data="sett"))
