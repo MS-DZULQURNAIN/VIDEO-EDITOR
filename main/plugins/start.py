@@ -30,7 +30,7 @@ async def start(event):
                               ]) 
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     sendid = f'{event.sender_id}'
-    await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} Memulai bot⏸\n\nid : {sendid}')
+    await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} Memulai bot⏸\n\nid : `{sendid}`')
 
 @Drone.on(events.NewMessage(incoming=True, pattern="/help"))
 async def help(event):
