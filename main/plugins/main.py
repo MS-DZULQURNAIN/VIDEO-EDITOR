@@ -79,7 +79,7 @@ async def _encode(event):
                          Button.inline("720p", data="720")],
                         [Button.inline("x264", data="264"),
                          Button.inline("x265", data="265")],
-                        [Button.inline("BACK", data="video")]])
+                        [Button.inline("BACK", data="back")]])
      
 @Drone.on(events.callbackquery.CallbackQuery(data="compress"))
 async def _compress(event):
