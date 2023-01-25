@@ -60,7 +60,7 @@ async def screenshot(event, msg):
     if msg.file.name:
         name = msg.file.name
     try:
-        await fast_download(name, file, Drone, edit, time.time(), "**DOWNLOADING:**")
+        await fast_download(name, file, Drone, edit, time.time(), "**MENDOWNLOAD:**")
     except Exception as e:
         print(e)
         return await edit.edit(f"An error occured while downloading.") 
