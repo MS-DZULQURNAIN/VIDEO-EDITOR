@@ -32,7 +32,7 @@ from main.plugins.ssgen import screenshot
 from LOCAL.localisation import FORCE_SUB_BUTT, source_text, SUPPORT_LINK
 
 #Don't be a MF by stealing someone's hardwork.
-forcesubtext = f"❌❌❌\n\nIni tidak akan berfungsi,silahkan klik `/start` dan join channel sebelum menggunakan saya😏"
+forcesubtext = f"❌❌❌\n\nIni tidak akan berfungsi,silahkan ketik `/start` dan join channel sebelum menggunakan saya😏"
                 
 @Drone.on(events.NewMessage(incoming=True,func=lambda e: e.is_private))
 async def compin(event):
@@ -48,14 +48,14 @@ async def compin(event):
                 return await event.reply(f'you are Banned to use me!\n\ncontact [SUPPORT]({SUPPORT_LINK})', link_preview=False)
             video = event.file.mime_type
             if 'video' in video:
-                await event.reply("**MS EDIT VIDEO📽🎞**",
+                await event.reply("**MS VIDEO EDITOR📽🎞**\n\nBot hanya bisa di akses 1 pengguna di 1 waktu,Jika kamu spam maka akan otomatis **KEBANNED**😏",
                             buttons=[
                                 [Button.inline("ENCODE", data="encode")],
-                                [Button.inline("COMPRESS", data="compress")],
-                                [Button.inline("CONVERT", data="convert")],
-                                [Button.inline("RENAME", data="rename")],
-                                [Button.inline("SSHOTS", data="sshots")],
-                                [Button.inline("TRIM", data="trim")]
+                                [Button.inline("KOMPRES UKURAN📉", data="compress")],
+                                [Button.inline("CONVERT FORMAT🔀", data="convert")],
+                                [Button.inline("UBAH NAMA📝", data="rename")],
+                                [Button.inline("SCREENSHOT📸", data="sshots")],
+                                [Button.inline("POTONG VIDEO✂", data="trim")]
                             ])
             elif 'png' in video:
                 return
