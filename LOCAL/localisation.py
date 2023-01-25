@@ -5,6 +5,8 @@ START_TEXT = "**Hallo Kamu😼\n\nSaya adalah MS VIDEO EDITOR!!!💻**\n\nSaya b
 
 thumbnail_text = "Thumbnail hanya bisa dipasang dengan durasi video minimal 20 detik, Jika dibawah 20 detik makan thumbnail tidak akan terpasang otomatis🗿👌"
 
+join_text = "**SILAHKAH JOIN SEMUA CHANNEL DIBAWAH INI UNTUK MENGGUNAKAN SAYA**😉\n\n Jika sudah silahkan kirim ulang video nya😁"
+
 CHANNEL_LINK = "https://t.me/MSDEPLOY"
 
 SUPPORT_LINK = "https://t.me/MS_DZULQURNAIN_NET"
