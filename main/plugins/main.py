@@ -33,7 +33,7 @@ from LOCAL.localisation import FORCE_SUB_BUTT, source_text, SUPPORT_LINK
 
 #Don't be a MF by stealing someone's hardwork.
 forcesubtext = (f'❌❌❌\n\nIni tidak akan berfungsi,silahkan klik `/start` dan join channel sebelum menggunakan saya😏",
-          [Button.url("AFFA", url="https://t.me/MSDEPLOY")]) 
+                                 ..                                                     .   [Button.url("AFFA", url="https://t.me/MSDEPLOY")]) 
 
 @Drone.on(events.NewMessage(incoming=True,func=lambda e: e.is_private))
 async def compin(event):
