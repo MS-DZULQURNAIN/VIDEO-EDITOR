@@ -28,7 +28,7 @@ from LOCAL.localisation import JPG3 as t
 from LOCAL.localisation import SUPPORT_LINK
 
 async def media_rename(event, msg, new_name):
-    edit = await event.client.send_message(event.chat_id, 'Trying to process.', reply_to=msg.id)
+    edit = await event.client.send_message(event.chat_id, 'Sedang mengubah nama', reply_to=msg.id)
     db = Database(MONGODB_URI, 'videoconvertor')
     T = await db.get_thumb(event.sender_id)
     if T is not None:
@@ -91,18 +91,18 @@ async def media_rename(event, msg, new_name):
     else:
         default_name = msg.file.name
         if not default_name:
-            await edit.edit("Failed fetching extension of your file.")
+            await edit.edit("Gagal mengambil ekstensi file Anda!")
         else:
             try:
                 name = msg.file.name
                 ext = (name.split("."))[1]
                 out = new_name + "." + ext
-                await fast_download(name, file, Drone, edit, DT, "**DOWNLOADING:**")
+                await fast_download(name, file, Drone, edit, DT, "**MENDOWNLOAD:**")
                 rename(name, out)
                 UT = time.time()
-                uploader = await fast_upload(out, out, UT, Drone, edit, '**UPLOADING:**')
+                uploader = await fast_upload(out, out, UT, Drone, edit, '**MENGUPLOAD:**')
                 net_time = round(DT - UT)
-                await Drone.send_file(event.chat_id, uploader, caption=f"**Renamed by** : @{BOT_UN}\n\nTotal time:{net_time} seconds.", thumb=THUMB, force_document=True)
+                await Drone.send_file(event.chat_id, uploader, caption=f"Telah terusan nama dari : @{BOT_UN}\n\nTotal time:{net_time} seconds.", thumb=THUMB, force_document=True)
             except Exception as e:
                 await edit.edit(f"An error occured.\n\nContact [SUPPORT]({SUPPORT_LINK})", link_preview=False)
                 print(e)
