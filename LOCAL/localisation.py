@@ -1,7 +1,7 @@
 #Don't be a thief by stealing other's Hardwork, it took time and effort to make this repo.
 #Respect my work by not making any changes here.
 
-START_TEXT = "**Hallo Kamu😼\n\nSaya adalah MS VIDEO EDITOR!!!💻**\n\nSaya bisa melakukan beberapa perintah editing video seperti `encode`,`convert`,`rename`,`screenshot`,`trim`,`thumbnail`😎\n\nUntuk memasang thumbnail silahkan ketik `/thumnnail`📜\n\nSilahkan kirim video untuk mulai mengedit:v"
+START_TEXT = "**Hallo Kamu😼\n\nSaya adalah MS VIDEO EDITOR!!!💻**\n\nSaya bisa melakukan beberapa perintah editing video seperti `encode`,`convert`,`rename`,`screenshot`,`trim`,`thumbnail`😎\n\nUntuk memasang thumbnail silahkan ketik `/thumbnail`🖼\n\n**Silahkan kirim video untuk mulai mengedit:v**"
 
 thumbnail_text = "Thumbnail hanya bisa dipasang dengan durasi video minimal 20 detik, Jika dibawah 20 detik makan thumbnail tidak akan terpasang otomatis🗿👌"
 
