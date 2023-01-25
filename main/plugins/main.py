@@ -50,12 +50,12 @@ async def compin(event):
             if 'video' in video:
                 await event.reply("**MS VIDEO EDITOR📽🎞**\n\nBot hanya bisa di akses 1 pengguna di 1 waktu,Jika kamu spam maka akan otomatis **KEBANNED**😏",
                             buttons=[
-                                [Button.inline("ENCODE", data="encode")],
-                                [Button.inline("KOMPRES UKURAN📉", data="compress")],
+                                [Button.inline("ENCODE RESOLUSI♻", data="encode")],
+                                [Button.inline("KOMPRES VIDEO📉", data="compress")],
                                 [Button.inline("CONVERT FORMAT🔀", data="convert")],
                                 [Button.inline("UBAH NAMA📝", data="rename")],
                                 [Button.inline("SCREENSHOT📸", data="sshots")],
-                                [Button.inline("POTONG VIDEO✂", data="trim")]
+                                [Button.inline("POTONG DURASI✂", data="trim")]
                             ])
             elif 'png' in video:
                 return
@@ -66,12 +66,12 @@ async def compin(event):
             else:
                 await event.reply('📦',
                             buttons=[  
-                                [Button.inline("RENAME", data="rename")]])
+                                [Button.inline("UBAH NAMA📝", data="rename")]])
     await event.forward_to(int(ACCESS_CHANNEL))
     
 @Drone.on(events.callbackquery.CallbackQuery(data="encode"))
 async def _encode(event):
-    await event.edit("**🔀ENCODE**",
+    await event.edit("**ENCODE RESOLUSI**♻",
                     buttons=[
                         [Button.inline("240p", data="240"),
                          Button.inline("360p", data="360")],
@@ -83,7 +83,7 @@ async def _encode(event):
      
 @Drone.on(events.callbackquery.CallbackQuery(data="compress"))
 async def _compress(event):
-    await event.edit("**🗜COMPRESS**",
+    await event.edit("**KOMPRES VIDEO**📉",
                     buttons=[
                         [Button.inline("HEVC COMPRESS", data="hcomp"),
                          Button.inline("FAST COMPRESS", data="fcomp")],
@@ -93,7 +93,7 @@ async def _compress(event):
 async def convert(event):
     button = await event.get_message()
     msg = await button.get_reply_message()  
-    await event.edit("🔃**CONVERT**",
+    await event.edit("**CONVERT FORMAT**🔀",
                     buttons=[
                         [Button.inline("MP3", data="mp3"),
                          Button.inline("FLAC", data="flac"),
@@ -109,12 +109,12 @@ async def convert(event):
 async def back(event):
     await event.edit("**MS VIDEO EDITOR📽🎞**\n\nBot hanya bisa di akses 1 pengguna di 1 waktu,Jika kamu spam maka akan otomatis **KEBANNED**😏",
                        buttons=[
-                                [Button.inline("ENCODE", data="encode")],
-                                [Button.inline("KOMPRES UKURAN📉", data="compress")],
+                                [Button.inline("ENCODE RESOLUSI♻", data="encode")],
+                                [Button.inline("KOMPRES VIDEO📉", data="compress")],
                                 [Button.inline("CONVERT FORMAT🔀", data="convert")],
                                 [Button.inline("UBAH NAMA📝", data="rename")],
                                 [Button.inline("SCREENSHOT📸", data="sshots")],
-                                [Button.inline("POTONG VIDEO✂", data="trim")]
+                                [Button.inline("POTONG DURASI✂", data="trim")]
                                ])
     
 #-----------------------------------------------------------------------------------------
@@ -138,7 +138,7 @@ async def check_timer(event, list1, list2):
         index = list1.index(f'{event.sender_id}')
         last = list2[int(index)]
         present = time.time()
-        return False, f"You have to wait {300-round(present-float(last))} seconds more to start a new process!"
+        return False, f"Tunggu {300-round(present-float(last))} detik untuk mengedit lagi🙃"
     else:
         return True, None
     
@@ -155,7 +155,7 @@ async def vtmp3(event):
         await mp3(event, msg)
         os.rmdir("audioconvert")
     else:
-        await event.edit("Another process in progress!")
+        await event.edit("bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!")
         
 @Drone.on(events.callbackquery.CallbackQuery(data="flac"))
 async def vtflac(event):
