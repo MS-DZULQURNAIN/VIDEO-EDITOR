@@ -67,7 +67,7 @@ async def rem_thumbnail(event):
     if T is None:
         return await edit.edit('Tidak ada thumbnail yg terpasang😒')
     await db.rem_thumb_link(event.sender_id)
-    await edit.edit('Thumbnail terhapus! ketik `/thumbnail` untuk memasang thumbnail kembali:v)
+    await edit.edit('Thumbnail terhapus! ketik `/thumbnail` untuk memasang thumbnail kembali:v')
     
 #Heroku--------------------------------------------------------------------------------------------------------------
    
