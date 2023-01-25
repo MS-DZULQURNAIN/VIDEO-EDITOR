@@ -63,7 +63,7 @@ async def screenshot(event, msg):
         await fast_download(name, file, Drone, edit, time.time(), "**MENDOWNLOAD:**")
     except Exception as e:
         print(e)
-        return await edit.edit(f"Terjadi kesalahan saat mendownload") 
+        return await edit.edit(f"Terjadi kesalahan saat mendownload!") 
     pictures = []
     captions = []
     n = [8, 7, 6, 5, 4, 3, 2, 1.5, 1.25, 1.10]
@@ -73,11 +73,11 @@ async def screenshot(event, msg):
         if sshot is not None:
             pictures.append(sshot)
             captions.append(f'screenshot at {hhmmss(duration/n[i])}')
-            await edit.edit(f"`{i+1}` screenshot generated.")
+            await edit.edit(f"`{i+1}` telah terscreenshot")
     if len(pictures) > 0:
         await Drone.send_file(event.chat_id, pictures, caption=captions)
     else:
-        await edit.edit("No screenshots could be generated!")
+        await edit.edit("Tidak ada yg terscreenshot!")
     await edit.delete()
     try:
         for pic in pictures:
