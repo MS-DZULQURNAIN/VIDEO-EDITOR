@@ -29,13 +29,13 @@ async def incomming(event):
         await db.add_user(event.sender_id)
 
 @Drone.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="/pengguna"))
-async def listusers(event):
+async def pengguna(event):
     xx = await event.reply("Menghitung total pengguna di Database...")
     x = await db.total_users_count()
     await xx.edit(f"Total pengguna(s) {int(x)}")
 
 @Drone.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="/broadcast"))
-async def bcast(event):
+async def broadcast(event):
     ids = []
     msg = await event.get_reply_message()
     if not msg:
@@ -56,14 +56,14 @@ async def bcast(event):
                 sent.append(id)
                 await xx.edit(f"Total pengguna : {x}", 
                              buttons=[
-                                 [Button.inline(f"SENT: {len(sent)}", data="none")],
-                                 [Button.inline(f"FAILED: {len(failed)}", data="none")]])
+                                 [Button.inline(f"TERKIRIM: {len(sent)}", data="none")],
+                                 [Button.inline(f"GAGAL: {len(failed)}", data="none")]])
                 await asyncio.sleep(1)
             except FloodWaitError as fw:
                 await asyncio.sleep(fw.seconds + 10)
                 await event.client.send_message(int(id), msg)
                 sent.append(id)
-                await xx.edit(f"Total users : {x}", 
+                await xx.edit(f"Total pengguna : {x}", 
                              buttons=[
                                 [Button.inline(f"TERKIRIM: {len(sent)}", data="none")],
                                 [Button.inline(f"GAGAL: {len(failed)}", data="none")]])
@@ -81,7 +81,7 @@ async def bcast(event):
     
     
 @Drone.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="^/banned (.*)" ))
-async def bban(event):
+async def banned(event):
     c = event.pattern_match.group(1)
     if not c:
         await event.reply("Banned siapa!?")
@@ -99,7 +99,7 @@ async def bban(event):
     admins.remove(f'{int(AUTH)}')
     
 @Drone.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="^/unbanned (.*)" ))
-async def unbban(event):
+async def unbanned(event):
     xx = event.pattern_match.group(1)
     if not xx:
         await event.reply("Unbanned siapa?")
