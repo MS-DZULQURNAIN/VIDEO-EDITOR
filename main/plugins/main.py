@@ -45,7 +45,7 @@ async def compin(event):
                 return await event.reply(forcesubtext)
             banned = await db.is_banned(event.sender_id)
             if banned is True:
-                return await event.reply(f'you are Banned to use me!\n\ncontact [SUPPORT]({SUPPORT_LINK})', link_preview=False)
+                return await event.reply(f'Kamu telah dibanned!\n\ncontact [SUPPORT]({SUPPORT_LINK})', link_preview=False)
             video = event.file.mime_type
             if 'video' in video:
                 await event.reply("**MS VIDEO EDITOR📽🎞**\n\nBot hanya bisa di akses 1 pengguna di 1 waktu,Jika kamu spam maka akan otomatis **KEBANNED**😏",
@@ -127,7 +127,7 @@ async def set_timer(event, list1, list2):
     now = time.time()
     list2.append(f'{now}')
     list1.append(f'{event.sender_id}')
-    await event.client.send_message(event.chat_id, 'You can start a new process again after 5 minutes.')
+    await event.client.send_message(event.chat_id, 'Kamu bisa mengedit lagi setelah 5 menit')
     await asyncio.sleep(300)
     list2.pop(int(timer.index(f'{now}')))
     list1.pop(int(process1.index(f'{event.sender_id}')))
@@ -155,7 +155,7 @@ async def vtmp3(event):
         await mp3(event, msg)
         os.rmdir("audioconvert")
     else:
-        await event.edit("bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!")
+        await event.edit("Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼")
         
 @Drone.on(events.callbackquery.CallbackQuery(data="flac"))
 async def vtflac(event):
@@ -170,7 +170,7 @@ async def vtflac(event):
         await flac(event, msg)
         os.rmdir("audioconvert")
     else:
-        await event.edit("Another process in progress!")
+        await event.edit("Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼")
         
 @Drone.on(events.callbackquery.CallbackQuery(data="wav"))
 async def vtwav(event):
@@ -185,7 +185,7 @@ async def vtwav(event):
         await wav(event, msg)
         os.rmdir("audioconvert")
     else:
-        await event.edit("Another process in progress!")
+        await event.edit("Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼")
         
 @Drone.on(events.callbackquery.CallbackQuery(data="mp4"))
 async def vtmp4(event):
