@@ -214,7 +214,7 @@ async def mp4(event, msg):
     try:
         UT = time.time()
         uploader = await fast_upload(f'{out}.mp4', f'{out}.mp4', UT, Drone, edit, '**MENGUPLOAD:**')
-        await Drone.send_file(event.chat_id, uploader, thumb=JPG, caption=f'TELAH TERCONVERT dari: @{BOT_UN}'\n\n Owner : @ms_dzulqurnain👤, force_document=True)
+        await Drone.send_file(event.chat_id, uploader, thumb=JPG, caption=f'TELAH TERCONVERT dari: @{BOT_UN}\n\n Owner : @ms_dzulqurnain👤', force_document=True)
     except Exception as e:
         print(e)
         return await edit.edit(f"Terjadi kesalahan saat mengupload!\n\nContact [SUPPORT]({SUPPORT_LINK})")
