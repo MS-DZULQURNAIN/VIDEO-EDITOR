@@ -36,12 +36,11 @@ async def start(event):
 async def help(event):
     await event.reply(f'{help_text}',
                       buttons=[
-                               Button.inline("TUTUP", data="close")
+                               Button.inline("TUTUP💝", data="close")
                               ])
 @Drone.on(events.callbackquery.CallbackQuery(data="close"))
 async def close(event):  
     await event.delete()
-    await query.message.reply_to_message.delete()
     
 @Drone.on(events.NewMessage(incoming=True, pattern="/thumbnail"))
 async def thumbnail(event):
