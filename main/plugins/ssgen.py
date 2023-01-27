@@ -52,7 +52,7 @@ async def ssgen(video, time_stamp):
 async def screenshot(event, msg):
     Drone = event.client
     name = dt.now().isoformat("_", "seconds") + ".mp4"
-    edit = await Drone.send_message(event.chat_id, "Sedang screenshot...", reply_to=msg.id)
+    edit = await MSDZULQURNAIN.send_message(event.chat_id, "Sedang screenshot...", reply_to=msg.id)
     if hasattr(msg.media, "document"):
         file = msg.media.document
     else:
@@ -75,7 +75,7 @@ async def screenshot(event, msg):
             captions.append(f'screenshot at {hhmmss(duration/n[i])}')
             await edit.edit(f"`{i+1}` Telah terscreenshot")
     if len(pictures) > 0:
-        await Drone.send_file(event.chat_id, pictures, caption=captions)
+        await MSDZULQURNAIN.send_file(event.chat_id, pictures, caption=captions)
     else:
         await edit.edit("Tidak ada yg terscreenshot!")
     await edit.delete()
