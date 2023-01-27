@@ -89,7 +89,7 @@ async def remt(event):
 
 @Drone.on(events.NewMessage(incoming=True, pattern="/restart"))
 async def restart(event):
-    await event.reply(f'{restart}', 
+    await event.reply(f'{restart}')
     
 @Drone.on(events.callbackquery.CallbackQuery(data="restart"))
 async def res(event):
