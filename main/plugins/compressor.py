@@ -21,7 +21,7 @@ from telethon.tl.types import DocumentAttributeVideo
 from ethon.telefunc import fast_download, fast_upload
 from ethon.pyfunc import video_metadata
 
-from .. import Drone, BOT_UN, LOG_CHANNEL
+from .. import MSDZULQURNAIN, BOT_UN, LOG_CHANNEL
 
 from LOCAL.localisation import SUPPORT_LINK, JPG, JPG2, JPG3
 from LOCAL.utils import ffmpeg_progress
@@ -30,8 +30,8 @@ from main.plugins.actions import LOG_START, LOG_END
 async def compress(event, msg, ffmpeg_cmd=0, ps_name=None):
     if ps_name is None:
         ps_name = '**MENGKOMPRES:**'
-    Drone = event.client
-    edit = await Drone.send_message(event.chat_id, "Sedang mengkompres...", reply_to=msg.id)
+    MSDZULQURNAIN = event.client
+    edit = await MSDZULQURNAIN.send_message(event.chat_id, "Sedang mengkompres...", reply_to=msg.id)
     new_name = "out_" + dt.now().isoformat("_", "seconds")
     if hasattr(msg.media, "document"):
         file = msg.media.document
@@ -61,7 +61,7 @@ async def compress(event, msg, ffmpeg_cmd=0, ps_name=None):
     log = await LOG_START(event, f'**{str(_ps)} PROSES DIMULAI**\n\n[Bot is busy now]({SUPPORT_LINK})')
     log_end_text = f'**{_ps} PROSES SELESAI**\n\n[Bot is free now]({SUPPORT_LINK})'
     try:
-        await fast_download(n, file, Drone, edit, DT, "**MENDOWNLOAD:**")
+        await fast_download(n, file, MSDZULQURNAIN, edit, DT, "**MENDOWNLOAD:**")
     except Exception as e:
         os.rmdir("encodemedia")
         await log.delete()
@@ -115,8 +115,8 @@ async def compress(event, msg, ffmpeg_cmd=0, ps_name=None):
     await log.edit("Mengupload file.")
     if 'x-matroska' in mime:
         try:
-            uploader = await fast_upload(f'{out2}', f'{out2}', UT, Drone, edit, '**MENGUPLOAD:**')
-            await Drone.send_file(event.chat_id, uploader, caption=text, thumb=JPG, force_document=True)
+            uploader = await fast_upload(f'{out2}', f'{out2}', UT, MSDZULQURNAIN, edit, '**MENGUPLOAD:**')
+            await MSDZULQURNAIN.send_file(event.chat_id, uploader, caption=text, thumb=JPG, force_document=True)
         except Exception as e:
             await log.delete()
             await LOG_END(event, log_end_text)
@@ -125,8 +125,8 @@ async def compress(event, msg, ffmpeg_cmd=0, ps_name=None):
             return await edit.edit(f"Terjadi kesalahan saat mengupload!\n\nContact [SUPPORT]({SUPPORT_LINK})", link_preview=False)
     elif 'webm' in mime:
         try:
-            uploader = await fast_upload(f'{out2}', f'{out2}', UT, Drone, edit, '**MENGUPLOAD:**')
-            await Drone.send_file(event.chat_id, uploader, caption=text, thumb=JPG, force_document=True)
+            uploader = await fast_upload(f'{out2}', f'{out2}', UT, MSDZULQURNAIN, edit, '**MENGUPLOAD:**')
+            await MSDZULQURNAIN.send_file(event.chat_id, uploader, caption=text, thumb=JPG, force_document=True)
         except Exception as e:
             await log.delete()
             await LOG_END(event, log_end_text)
@@ -144,8 +144,8 @@ async def compress(event, msg, ffmpeg_cmd=0, ps_name=None):
             await Drone.send_file(event.chat_id, uploader, caption=text, thumb=JPG3, attributes=attributes, force_document=False)
         except Exception:
             try:
-                uploader = await fast_upload(f'{out2}', f'{out2}', UT, Drone, edit, '**MENGUPLOAD:**')
-                await Drone.send_file(event.chat_id, uploader, caption=text, thumb=JPG, force_document=True)
+                uploader = await fast_upload(f'{out2}', f'{out2}', UT, MSDZULQURNAIN, edit, '**MENGUPLOAD:**')
+                await MSDZULQURNAIN.send_file(event.chat_id, uploader, caption=text, thumb=JPG, force_document=True)
             except Exception as e:
                 await log.delete()
                 await LOG_END(event, log_end_text)
