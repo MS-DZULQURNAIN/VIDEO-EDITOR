@@ -60,7 +60,7 @@ async def join(event):
                                 Button.url("CHANNEL 1", url="https://t.me/MSDEPLOY")],
                                 [
                                 Button.url("CHANNEL 2", url="https://t.me/MS_DZULQURNAIN_NET")],
-                                [Button.url("CHANNEL 3", url="https://semawur.com/AjAHI")],
+                                [Button.url("CHANNEL 3", url="https://shareduit.pw/2dLqZT2wBr")],
                                 [Button.inline("TUTUP💝", data="tutup")
                               ]]) 
  #-----------------------------------------------------------------------------------------------                            
