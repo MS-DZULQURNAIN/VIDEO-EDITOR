@@ -15,7 +15,7 @@
 from telethon import events, Button
 from decouple import config
 
-from .. import Drone, AUTH_USERS, MONGODB_URI
+from .. import MSDZULQURNAIN, AUTH_USERS, MONGODB_URI
 
 from main.Database.database import Database
 
@@ -23,18 +23,18 @@ from main.Database.database import Database
 
 db = Database(MONGODB_URI, 'videoconvertor')
 
-@Drone.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
+@MSDZULQURNAIN.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
 async def incomming(event):
     if not await db.is_user_exist(event.sender_id):
         await db.add_user(event.sender_id)
 
-@Drone.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="/pengguna"))
+@MSDZULQURNAIN.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="/pengguna"))
 async def pengguna(event):
     xx = await event.reply("Menghitung total pengguna di Database...")
     x = await db.total_users_count()
     await xx.edit(f"Total pengguna(s) {int(x)}")
 
-@Drone.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="/broadcast"))
+@MSDZULQURNAIN.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="/broadcast"))
 async def broadcast(event):
     ids = []
     msg = await event.get_reply_message()
@@ -80,7 +80,7 @@ async def broadcast(event):
                      [Button.inline(f"GAGAL: {len(failed)}", data="none")]])
     
     
-@Drone.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="^/banned (.*)" ))
+@MSDZULQURNAIN.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="^/banned (.*)" ))
 async def banned(event):
     c = event.pattern_match.group(1)
     if not c:
@@ -98,7 +98,7 @@ async def banned(event):
         await event.reply(f"{c} sekarang dibanned")
     admins.remove(f'{int(AUTH)}')
     
-@Drone.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="^/unbanned (.*)" ))
+@MSDZULQURNAIN.on(events.NewMessage(incoming=True, from_users=AUTH_USERS , pattern="^/unbanned (.*)" ))
 async def unbanned(event):
     xx = event.pattern_match.group(1)
     if not xx:
