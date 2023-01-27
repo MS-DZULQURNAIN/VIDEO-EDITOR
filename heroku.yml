@@ -1,5 +1,5 @@
 build:
   docker:
-    drone: Dockerfile
+    MSDZULQURNAIN: Dockerfile
 run:
-  drone: bash convertor.sh
+  MSDZULQURNAIN: bash convertor.sh
