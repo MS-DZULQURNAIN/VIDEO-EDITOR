@@ -49,7 +49,8 @@ async def thumbnail(event):
                                 Button.inline("PASANG THUMBNAIL🖼", data="sett")],
                                 [
                                 Button.inline("HAPUS THUMBNAIL🗑", data="remt")],
-                                [Button.inline("TUTUP💝", data="tutup")]
+                                [
+                                Button.inline("TUTUP💝", data="tutup")
                               ]])
   
 @Drone.on(events.NewMessage(incoming=True, pattern="/join"))
