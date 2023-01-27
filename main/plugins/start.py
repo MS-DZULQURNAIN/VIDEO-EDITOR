@@ -16,33 +16,33 @@ from telethon import events, Button
 from ethon.teleutils import mention
 from ethon.mystarts import vc_menu
 
-from .. import Drone, ACCESS_CHANNEL, AUTH_USERS
+from .. import MSDZULQURNAIN, ACCESS_CHANNEL, AUTH_USERS
 
 from main.plugins.actions import set_thumbnail, rem_thumbnail, heroku_restart
-from LOCAL.localisation import START_TEXT as st
+from LOCAL.localisation import START_TEXT as mulai
 from LOCAL.localisation import join_text, thumbnail_text, info_text, spam_notice, help_text, source_text, SUPPORT_LINK
 
-@Zulll.on(events.NewMessage(incoming=True, pattern="/start"))
+@MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
-    await event.reply(f'{st}', 
+    await event.reply(f'{mulai}', 
                       buttons=[
                                 Button.url("DEVELOPER👤", url="https://t.me/ms_dzulqurnain")
                               ]) 
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     sendid = f'{event.sender_id}'
-    await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} Memulai bot⏸\n\nid : `{sendid}`')
+    await MSDZULQURNAIN.send_message(int(ACCESS_CHANNEL), f'{tag} Memulai bot⏸\n\nid : `{sendid}`')
 
-@Drone.on(events.NewMessage(incoming=True, pattern="/help"))
+@MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/help"))
 async def help(event):
     await event.reply(f'{help_text}',
                       buttons=[
                                Button.inline("TUTUP💝", data="tutup")
                               ])
-@Drone.on(events.callbackquery.CallbackQuery(data="tutup"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="tutup"))
 async def tutup(event):  
     await event.delete()
     
-@Drone.on(events.NewMessage(incoming=True, pattern="/thumbnail"))
+@MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/thumbnail"))
 async def thumbnail(event):
     await event.reply(f'**RULES MEMASANG THUMBNAIL😒**\n\n{thumbnail_text}',
                       buttons=[[
@@ -53,7 +53,7 @@ async def thumbnail(event):
                                 Button.inline("TUTUP💝", data="tutup")
                               ]])
   
-@Drone.on(events.NewMessage(incoming=True, pattern="/join"))
+@MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/join"))
 async def join(event):
     await event.reply(f'{join_text}', 
                       buttons=[[
@@ -64,12 +64,12 @@ async def join(event):
                               ]]) 
  #-----------------------------------------------------------------------------------------------                            
     
-@Drone.on(events.callbackquery.CallbackQuery(data="sett"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="sett"))
 async def sett(event):    
     button = await event.get_message()
     msg = await button.get_reply_message() 
     await event.delete()
-    async with Drone.conversation(event.chat_id) as conv: 
+    async with MSDZULQURNAIN.conversation(event.chat_id) as conv: 
         xx = await conv.send_message("Kirim saya foto untuk thumbnail dengan reply pesan ini")
         x = await conv.get_reply()
         if not x.media:
@@ -82,16 +82,16 @@ async def sett(event):
         await set_thumbnail(event, x.media)
         await xx.delete()
         
-@Drone.on(events.callbackquery.CallbackQuery(data="remt"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="remt"))
 async def remt(event):  
     await event.delete()
     await rem_thumbnail(event)
 
-@Drone.on(events.NewMessage(incoming=True, pattern="/restart"))
+@MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/restart"))
 async def restart(event):
     await event.reply(f'{restart}')
     
-@Drone.on(events.callbackquery.CallbackQuery(data="restart"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="restart"))
 async def res(event):
     if not f'{event.sender_id}' == f'{int(AUTH_USERS)}':
         return await event.edit("Hanya admin yg dapat merestart")
