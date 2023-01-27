@@ -1,3 +1,3 @@
 #!/bin/bash
-echo "starting VideoConvertor ~@DroneBots";
+echo "Memulai MsVideoEDITOR @ms_dzulqurnain";
 python3 -m main
