@@ -78,7 +78,7 @@ async def trim(event, msg, st, et):
     except Exception:
         try:
             uploader = await fast_upload(f'{out2}', f'{out2}', UT, MSDZULQURNAIN, edit, '**MENGUPLOAD:**')
-            await Drone.send_file(event.chat_id, uploader, caption=text, thumb=JPG, force_document=True)
+            await MSDZULQURNAIN.send_file(event.chat_id, uploader, caption=text, thumb=JPG, force_document=True)
         except Exception as e:
             print(e)
             return await edit.edit(f"Terjadi kesalahan saat mengupload!\n\nContact [SUPPORT]({SUPPORT_LINK})", link_preview=False)
