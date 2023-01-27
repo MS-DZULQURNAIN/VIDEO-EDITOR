@@ -87,6 +87,10 @@ async def remt(event):
     await event.delete()
     await rem_thumbnail(event)
 
+@Drone.on(events.NewMessage(incoming=True, pattern="/restart"))
+async def restart(event):
+    await event.reply(f'{restart}', 
+    
 @Drone.on(events.callbackquery.CallbackQuery(data="restart"))
 async def res(event):
     if not f'{event.sender_id}' == f'{int(AUTH_USERS)}':
