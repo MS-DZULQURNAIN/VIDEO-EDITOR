@@ -19,7 +19,7 @@ from telethon.tl.types import DocumentAttributeVideo
 from ethon.telefunc import fast_download
 from ethon.pyfunc import video_metadata
 
-from .. import Drone, LOG_CHANNEL, FORCESUB_UN, MONGODB_URI, ACCESS_CHANNEL
+from .. import MSDZULQURNAIN, LOG_CHANNEL, FORCESUB_UN, MONGODB_URI, ACCESS_CHANNEL
 
 from main.plugins.rename import media_rename
 from main.plugins.compressor import compress
@@ -34,7 +34,7 @@ from LOCAL.localisation import source_text, SUPPORT_LINK
 #Don't be a MF by stealing someone's hardwork.
 forcesubtext = f"❌❌❌\n\nIni tidak akan berfungsi,silahkan ketik `/join` dan join semua channel sebelum menggunakan saya😏"
                 
-@Drone.on(events.NewMessage(incoming=True,func=lambda e: e.is_private))
+@MSDZULQURNAIN.on(events.NewMessage(incoming=True,func=lambda e: e.is_private))
 async def compin(event):
     db = Database(MONGODB_URI, 'videoconvertor')
     if event.is_private:
@@ -69,7 +69,7 @@ async def compin(event):
                                 [Button.inline("UBAH NAMA📝", data="rename")]])
     await event.forward_to(int(ACCESS_CHANNEL))
     
-@Drone.on(events.callbackquery.CallbackQuery(data="encode"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="encode"))
 async def _encode(event):
     await event.edit("**ENCODE RESOLUSI**♻",
                     buttons=[
@@ -81,7 +81,7 @@ async def _encode(event):
                          Button.inline("x265", data="265")],
                         [Button.inline("KEMBALI", data="back")]])
      
-@Drone.on(events.callbackquery.CallbackQuery(data="compress"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="compress"))
 async def _compress(event):
     await event.edit("**KOMPRES VIDEO**📉",
                     buttons=[
@@ -89,7 +89,7 @@ async def _compress(event):
                          Button.inline("FAST COMPRESS", data="fcomp")],
                         [Button.inline("KEMBALI", data="back")]])
 
-@Drone.on(events.callbackquery.CallbackQuery(data="convert"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="convert"))
 async def convert(event):
     button = await event.get_message()
     msg = await button.get_reply_message()  
@@ -105,7 +105,7 @@ async def convert(event):
                          Button.inline("VIDEO", data="video")],
                         [Button.inline("KEMBALI", data="back")]])
                         
-@Drone.on(events.callbackquery.CallbackQuery(data="back"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="back"))
 async def back(event):
     await event.edit("**MS VIDEO EDITOR📽🎞**\n\nBot hanya bisa di akses 1 pengguna di 1 waktu,Jika kamu spam maka akan otomatis **KEBANNED**😏",
                        buttons=[
@@ -142,7 +142,7 @@ async def check_timer(event, list1, list2):
     else:
         return True, None
     
-@Drone.on(events.callbackquery.CallbackQuery(data="mp3"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="mp3"))
 async def vtmp3(event):
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -157,7 +157,7 @@ async def vtmp3(event):
     else:
         await event.edit("Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼")
         
-@Drone.on(events.callbackquery.CallbackQuery(data="flac"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="flac"))
 async def vtflac(event):
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -172,7 +172,7 @@ async def vtflac(event):
     else:
         await event.edit("Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼")
         
-@Drone.on(events.callbackquery.CallbackQuery(data="wav"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="wav"))
 async def vtwav(event):
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -187,7 +187,7 @@ async def vtwav(event):
     else:
         await event.edit("Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼")
         
-@Drone.on(events.callbackquery.CallbackQuery(data="mp4"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="mp4"))
 async def vtmp4(event):
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -197,7 +197,7 @@ async def vtmp4(event):
     await event.delete()
     await mp4(event, msg)
     
-@Drone.on(events.callbackquery.CallbackQuery(data="mkv"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="mkv"))
 async def vtmkv(event):
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -207,7 +207,7 @@ async def vtmkv(event):
     await event.delete()
     await mkv(event, msg)  
     
-@Drone.on(events.callbackquery.CallbackQuery(data="webm"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="webm"))
 async def vtwebm(event):
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -217,7 +217,7 @@ async def vtwebm(event):
     await event.delete()
     await webm(event, msg)  
     
-@Drone.on(events.callbackquery.CallbackQuery(data="file"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="file"))
 async def vtfile(event):
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -227,7 +227,7 @@ async def vtfile(event):
     await event.delete()
     await file(event, msg)    
 
-@Drone.on(events.callbackquery.CallbackQuery(data="video"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="video"))
 async def ftvideo(event):
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -237,7 +237,7 @@ async def ftvideo(event):
     await event.delete()
     await video(event, msg)
     
-@Drone.on(events.callbackquery.CallbackQuery(data="rename"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="rename"))
 async def rename(event):    
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -246,7 +246,7 @@ async def rename(event):
     msg = await button.get_reply_message()  
     await event.delete()
     markup = event.client.build_reply_markup(Button.force_reply())
-    async with Drone.conversation(event.chat_id) as conv: 
+    async with MSDZULQURNAIN.conversation(event.chat_id) as conv: 
         cm = await conv.send_message("Kirim saya nama baru untuk file dengan reply pesan ini!\n\n**CONTOH:** kamu nanyaa,kamu bertanya tanya🗿", buttons=markup)                              
         try:
             m = await conv.get_reply()
@@ -259,7 +259,7 @@ async def rename(event):
             return await cm.edit("Terjadi kesalahan saat menunggu respons")
     await media_rename(event, msg, new_name)  
     
-@Drone.on(events.callbackquery.CallbackQuery(data="fcomp"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="fcomp"))
 async def fcomp(event):
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -286,7 +286,7 @@ async def fcomp(event):
     else:
         await event.edit(f"Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
                        
-@Drone.on(events.callbackquery.CallbackQuery(data="hcomp"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="hcomp"))
 async def hcomp(event):
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -313,7 +313,7 @@ async def hcomp(event):
     else:
         await event.edit(f"Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
 
-@Drone.on(events.callbackquery.CallbackQuery(data="264"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="264"))
 async def _264(event):
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -332,7 +332,7 @@ async def _264(event):
     else:
         await event.edit(f"Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
       
-@Drone.on(events.callbackquery.CallbackQuery(data="265"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="265"))
 async def _265(event):
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -351,7 +351,7 @@ async def _265(event):
     else:
         await event.edit(f"Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
         
-@Drone.on(events.callbackquery.CallbackQuery(data="240"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="240"))
 async def _240(event):
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -370,7 +370,7 @@ async def _240(event):
     else:
         await event.edit(f"Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
         
-@Drone.on(events.callbackquery.CallbackQuery(data="360"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="360"))
 async def _360(event):
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -389,7 +389,7 @@ async def _360(event):
     else:
         await event.edit(f"Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
         
-@Drone.on(events.callbackquery.CallbackQuery(data="480"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="480"))
 async def _480(event):
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -408,7 +408,7 @@ async def _480(event):
     else:
         await event.edit(f"Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
         
-@Drone.on(events.callbackquery.CallbackQuery(data="720"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="720"))
 async def _720(event):
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -427,7 +427,7 @@ async def _720(event):
     else:
         await event.edit(f"Bot sedang mengedit video pengguna lain, tunggu sampai proses lain selesai!😼\n\n**[LOG CHANNEL](https://t.me/{LOG_CHANNEL})**", link_preview=False)
           
-@Drone.on(events.callbackquery.CallbackQuery(data="sshots"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="sshots"))
 async def ss_(event):
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -449,7 +449,7 @@ async def ss_(event):
     timer.pop(int(timer.index(f'{now}')))
     process1.pop(int(process1.index(f'{event.sender_id}')))
     
-@Drone.on(events.callbackquery.CallbackQuery(data="trim"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="trim"))
 async def vtrim(event):
     yy = await force_sub(event.sender_id)
     if yy is True:
@@ -458,7 +458,7 @@ async def vtrim(event):
     msg = await button.get_reply_message()  
     await event.delete()
     markup = event.client.build_reply_markup(Button.force_reply())
-    async with Drone.conversation(event.chat_id) as conv: 
+    async with MSDZULQURNAIN.conversation(event.chat_id) as conv: 
         try:
             xx = await conv.send_message("Kirim saya jam/menit/detik PERTAMA dengan reply pesan ini. \n\n**Dalam format jam:menit:detik**\n\nCONTOH DURASI JAM: `01:00:00`\nCONTOH DURASI MENIT: `00:01:00`\nCONTOH DURASI DETIK: `00:00:10` ", buttons=markup)
             x = await conv.get_reply()
