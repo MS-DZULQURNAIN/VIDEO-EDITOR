@@ -39,7 +39,7 @@ async def media_rename(event, msg, new_name):
         THUMB = path
     else:
         THUMB = t
-    Drone = event.client
+    MSDZULQURNAIN = event.client
     DT = time.time()
     if hasattr(msg.media, "document"):
         file = msg.media.document
