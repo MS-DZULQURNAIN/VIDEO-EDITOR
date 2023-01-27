@@ -38,8 +38,8 @@ async def help(event):
                       buttons=[
                                Button.inline("TUTUP💝", data="close")
                               ])
-@Drone.on(events.callbackquery.CallbackQuery(data="close"))
-async def close(event):  
+@Drone.on(events.callbackquery.CallbackQuery(data="tutup"))
+async def tutup(event):  
     await event.delete()
     
 @Drone.on(events.NewMessage(incoming=True, pattern="/thumbnail"))
@@ -48,7 +48,8 @@ async def thumbnail(event):
                       buttons=[[
                                 Button.inline("PASANG THUMBNAIL🖼", data="sett")],
                                 [
-                                Button.inline("HAPUS THUMBNAIL🗑", data="remt")
+                                Button.inline("HAPUS THUMBNAIL🗑", data="remt")],
+                                [Button.inline("TUTUP💝", data="tutup")]
                               ]])
   
 @Drone.on(events.NewMessage(incoming=True, pattern="/join"))
@@ -57,7 +58,8 @@ async def join(event):
                       buttons=[[
                                 Button.url("CHANNEL 1", url="https://t.me/MSDEPLOY")],
                                 [
-                                Button.url("CHANNEL 2", url="https://t.me/ms_dzulqurnain")
+                                Button.url("CHANNEL 2", url="https://t.me/ms_dzulqurnain")],
+                                [Button.inline("TUTUP💝", data="tutup")
                               ]]) 
  #-----------------------------------------------------------------------------------------------                            
     
@@ -83,7 +85,7 @@ async def sett(event):
 async def remt(event):  
     await event.delete()
     await rem_thumbnail(event)
-    
+
 @Drone.on(events.callbackquery.CallbackQuery(data="restart"))
 async def res(event):
     if not f'{event.sender_id}' == f'{int(AUTH_USERS)}':
