@@ -29,7 +29,7 @@ async def start(event):
                                 Button.url("DEVELOPER👤", url="https://t.me/MSDZULQURNAIN")],
                                 [
                                 Button.url("🄼🅂 ק𝙍♢JΞC†", url="https://t.me/MSPR0JECT"),
-                                Button.url("SUPPORT", url="https://t.me/MsPR0JECT")]
+                                Button.url("🄼🅂 Ꮥᴜקק♢ꭈׁׅ†", url="https://t.me/MsSUPP0RT")]
                               ]) 
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     sendid = f'{event.sender_id}'
@@ -60,10 +60,7 @@ async def thumbnail(event):
 async def join(event):
     await event.reply(f'{join_text}', 
                       buttons=[[
-                                Button.url("CHANNEL 1", url="https://t.me/MSDEPLOY")],
-                                [
-                                Button.url("CHANNEL 2", url="https://t.me/MS_DZULQURNAIN_NET")],
-                                [Button.url("CHANNEL 3", url="https://shareduit.pw/2dLqZT2wBr")],
+                                Button.url("JOIN CHANNEL", url="https://t.me/MSDEPLOY")],
                                 [Button.inline("TUTUP💝", data="tutup")
                               ]]) 
  #-----------------------------------------------------------------------------------------------                            
