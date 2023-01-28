@@ -25,8 +25,11 @@ from LOCAL.localisation import join_text, thumbnail_text, info_text, spam_notice
 @MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
     await event.reply(f'{mulai}', 
-                      buttons=[
-                                Button.url("DEVELOPER👤", url="https://t.me/ms_dzulqurnain")
+                      buttons=[[
+                                Button.url("DEVELOPER👤", url="https://t.me/MSDZULQURNAIN")],
+                                [
+                                Button.url("🄼🅂 ק𝙍♢JΞC†", url="https://t.me/MSPR0JECT"),
+                                Button.url("SUPPORT", url="https://t.me/MsPR0JECT")]
                               ]) 
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     sendid = f'{event.sender_id}'
