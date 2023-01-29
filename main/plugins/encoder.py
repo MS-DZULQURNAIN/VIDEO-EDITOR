@@ -24,7 +24,7 @@ from ethon.pyfunc import video_metadata
 from .. import MSDZULQURNAIN, BOT_UN, LOG_CHANNEL
 
 from main.plugins.actions import LOG_START, LOG_END
-from LOCAL.localisation import SUPPORT_LINK, JPG, JPG2, JPG3
+from LOCAL.localisation import admz, SUPPORT_LINK, JPG, JPG2, JPG3
 from LOCAL.utils import ffmpeg_progress
 
 async def encode(event, msg, scale=0):
@@ -117,7 +117,7 @@ async def encode(event, msg, scale=0):
     os.rename(out, out2)
     i_size = os.path.getsize(name)
     f_size = os.path.getsize(out2)     
-    text = f'**{_ps} dari** : @{BOT_UN}\n\n Owner : @ms_dzulqurnain👤'
+    text = f'**{_ps} dari** : @{BOT_UN}\n\n Owner : {admz}👤'
     UT = time.time()
     await log.edit("Mengupload file")
     if 'x-matroska' in mime:
@@ -163,6 +163,6 @@ async def encode(event, msg, scale=0):
     os.remove(name)
     os.remove(out2)
     await log.delete()
-    log_end_text2 = f'**{_ps} PROSES SELESAI**\n\nWaktu : {round((time.time()-DT)/60)} menit\nUkuran awal: {i_size/1000000}mb.\nUkuran akhir: {f_size/1000000}mb.\n\n Owner : @ms_dzulqurnain👤[Bot is free now.]({SUPPORT_LINK})'
+    log_end_text2 = f'**{_ps} PROSES SELESAI**\n\nWaktu : {round((time.time()-DT)/60)} menit\nUkuran awal: {i_size/1000000}mb.\nUkuran akhir: {f_size/1000000}mb.\n\n Owner : {admz}👤[Bot is free now.]({SUPPORT_LINK})'
     await LOG_END(event, log_end_text2)
     
