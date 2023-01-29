@@ -23,7 +23,7 @@ from ethon.pyutils import rename
 
 from .. import BOT_UN
 
-from LOCAL.localisation import SUPPORT_LINK, JPG, JPG2
+from LOCAL.localisation import admz, SUPPORT_LINK, JPG, JPG2
 
 async def mp3(event, msg):
     MSDZULQURNAIN = event.client
@@ -65,7 +65,7 @@ async def mp3(event, msg):
     try:
         UT = time.time()
         uploader = await fast_upload(f'{out}.mp3', f'{out}.mp3', UT, MSDZULQURNAIN, edit, '**MENGUPLOAD:**')
-        await MSDZULQURNAIN.send_file(event.chat_id, uploader, thumb=JPG, caption=f'AUDIO TERCONVERT dari: @{BOT_UN}\n\n Owner : @ms_dzulqurnain👤', force_document=True)
+        await MSDZULQURNAIN.send_file(event.chat_id, uploader, thumb=JPG, caption=f'AUDIO TERCONVERT dari: @{BOT_UN}\n\n Owner : {admz}👤', force_document=True)
     except Exception as e:
         os.rmdir("audioconvert")
         print(e)
@@ -115,7 +115,7 @@ async def flac(event, msg):
     try:
         UT = time.time()
         uploader = await fast_upload(f'{out}.flac', f'{out}.flac', UT, MSDZULQURNAIN, edit, '**MENGUPLOAD:**')
-        await MSDZULQURNAIN.send_file(event.chat_id, uploader, thumb=JPG, caption=f'AUDIO TEREKSTRAK dari: @{BOT_UN}\n\n Owner : @ms_dzulqurnain👤', force_document=True)
+        await MSDZULQURNAIN.send_file(event.chat_id, uploader, thumb=JPG, caption=f'AUDIO TEREKSTRAK dari: @{BOT_UN}\n\n Owner : {admz}👤', force_document=True)
     except Exception as e:
         os.rmdir("audioconvert")
         print(e)
@@ -166,7 +166,7 @@ async def wav(event, msg):
     try:
         UT = time.time()
         uploader = await fast_upload(f'{out}.wav', f'{out}.wav', UT, MSDZULQURNAIN, edit, '**MENGUPLOAD:**')
-        await MSDZULQURNAIN.send_file(event.chat_id, uploader, thumb=JPG, caption=f'AUDIO TEREKSTRAK dari: @{BOT_UN}\n\n Owner : @ms_dzulqurnain👤', force_document=True)
+        await MSDZULQURNAIN.send_file(event.chat_id, uploader, thumb=JPG, caption=f'AUDIO TEREKSTRAK dari: @{BOT_UN}\n\n Owner : {admz}👤', force_document=True)
     except Exception as e:
         os.rmdir("audioconvert")
         print(e)
@@ -214,7 +214,7 @@ async def mp4(event, msg):
     try:
         UT = time.time()
         uploader = await fast_upload(f'{out}.mp4', f'{out}.mp4', UT, MSDZULQURNAIN, edit, '**MENGUPLOAD:**')
-        await MSDZULQURNAIN.send_file(event.chat_id, uploader, thumb=JPG, caption=f'TELAH TERCONVERT dari: @{BOT_UN}\n\n Owner : @ms_dzulqurnain👤', force_document=True)
+        await MSDZULQURNAIN.send_file(event.chat_id, uploader, thumb=JPG, caption=f'TELAH TERCONVERT dari: @{BOT_UN}\n\n Owner : {admz}👤', force_document=True)
     except Exception as e:
         print(e)
         return await edit.edit(f"Terjadi kesalahan saat mengupload!\n\nContact [SUPPORT]({SUPPORT_LINK})")
@@ -259,7 +259,7 @@ async def mkv(event, msg):
     try:
         UT = time.time()
         uploader = await fast_upload(f'{out}', f'{out}', UT, MSDZULQURNAIN, edit, '**MENGUPLOAD:**')
-        await MSDZULQURNAIN.send_file(event.chat_id, uploader, thumb=JPG, caption=f'TELAH TERCONVERT dari: @{BOT_UN}\n\n Owner : @ms_dzulqurnain👤', force_document=True)
+        await MSDZULQURNAIN.send_file(event.chat_id, uploader, thumb=JPG, caption=f'TELAH TERCONVERT dari: @{BOT_UN}\n\n Owner : {admz}👤', force_document=True)
     except Exception as e:
         print(e)
         return await edit.edit(f"Terjadi kesalahan saat mengupload!\n\nContact [SUPPORT]({SUPPORT_LINK})")
@@ -304,7 +304,7 @@ async def webm(event, msg):
     try:
         UT = time.time()
         uploader = await fast_upload(f'{out}', f'{out}', UT, MSDZULQURNAIN, edit, '**MENGUPLOAD:**')
-        await MSDZULQURNAIN.send_file(event.chat_id, uploader, thumb=JPG, caption=f'TELAH TERCONVERT dari: @{BOT_UN}\n\n Owner : @ms_dzulqurnain👤', force_document=True)
+        await MSDZULQURNAIN.send_file(event.chat_id, uploader, thumb=JPG, caption=f'TELAH TERCONVERT dari: @{BOT_UN}\n\n Owner : {admz}👤', force_document=True)
     except Exception as e:
         print(e)
         return await edit.edit(f"Terjadi kesalahan saat mengupload\n\nContact [SUPPORT]({SUPPORT_LINK})")
@@ -339,7 +339,7 @@ async def file(event, msg):
     try:
         UT = time.time()
         uploader = await fast_upload(f'{name}', f'{name}', UT, MSDZULQURNAIN, edit, '**MENGUPLOAD:**')
-        await MSDZULQURNAIN.send_file(event.chat_id, uploader, thumb=JPG, caption=f'TELAH TERCONVERT dari: @{BOT_UN}\n\n Owner : @ms_dzulqurnain👤', force_document=True)
+        await MSDZULQURNAIN.send_file(event.chat_id, uploader, thumb=JPG, caption=f'TELAH TERCONVERT dari: @{BOT_UN}\n\n Owner : {admz}👤', force_document=True)
     except Exception as e:
         print(e)
         return await edit.edit(f"Terjadi kesalahan saat mengupload!\n\nContact [SUPPORT]({SUPPORT_LINK})")
@@ -389,7 +389,7 @@ async def video(event, msg):
         attributes = [DocumentAttributeVideo(duration=duration, w=width, h=height, supports_streaming=True)]           
         UT = time.time()
         uploader = await fast_upload(f'{out}', f'{out}', UT, MSDZULQURNAIN, edit, '**MENGUPLOAD:**')
-        await MSDZULQURNAIN.send_file(event.chat_id, uploader, thumb=JPG2, caption=f'*TELAH TERCONVERT dari: @{BOT_UN}\n\n Owner : @ms_dzulqurnain👤', attributes=attributes, force_document=False)
+        await MSDZULQURNAIN.send_file(event.chat_id, uploader, thumb=JPG2, caption=f'*TELAH TERCONVERT dari: @{BOT_UN}\n\n Owner : {admz}👤', attributes=attributes, force_document=False)
     except Exception as e:
         print(e)
         return await edit.edit(f"Terjadi kesalahan saat mengupload!\n\nContact [SUPPORT]({SUPPORT_LINK})")
