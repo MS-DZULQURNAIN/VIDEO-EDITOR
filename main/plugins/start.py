@@ -20,7 +20,7 @@ from .. import MSDZULQURNAIN, ACCESS_CHANNEL, AUTH_USERS
 
 from main.plugins.actions import set_thumbnail, rem_thumbnail, heroku_restart
 from LOCAL.localisation import START_TEXT as mulai
-from LOCAL.localisation import join_text, thumbnail_text, info_text, spam_notice, help_text, source_text, SUPPORT_LINK
+from LOCAL.localisation import donate_text, join_text, thumbnail_text, info_text, spam_notice, help_text, source_text, SUPPORT_LINK
 
 @MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
@@ -38,9 +38,16 @@ async def start(event):
 @MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/help"))
 async def help(event):
     await event.reply(f'{help_text}',
-                      buttons=[
+                      buttons=[[
+                               Button.inline("DONATE🙏", data="donasi")],
+                               [
                                Button.inline("TUTUP💝", data="tutup")
-                              ])
+                              ]])
+
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="donasi"))
+async def tutup(event):  
+    await event.reply(f'{donate_text}')
+    
 @MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="tutup"))
 async def tutup(event):  
     await event.delete()
