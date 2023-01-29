@@ -7,9 +7,9 @@ thumbnail_text = "Thumbnail hanya bisa dipasang dengan durasi video minimal 20 d
 
 join_text = "**SILAHKAH JOIN SEMUA CHANNEL DIBAWAH INI UNTUK MENGGUNAKAN SAYA**😉\n\n Jika sudah silahkan kirim ulang video nya😁"
 
-CHANNEL_LINK = "https://t.me/MSDEPLOY"
+CHANNEL_LINK = "https://t.me/MSPR0JECT"
 
-SUPPORT_LINK = "https://t.me/MS_DZULQURNAIN_NET"
+SUPPORT_LINK = "https://t.me/MsSUPP0RT"
 
 info_text = "❖MS VIDEO EDITOR❖\n\n✰ Owner Repo : @ms_dzulqurnain\n⇝ Channel : @MSDEPLOY\n⇝ GRUB : @MS_DZULQURNAIN_NET\n⇝ Beli/bongkar chip hdi terpercaya: @ZULLL_CHIP\n\nᝣMS DEPLOYᝣ"   
 
