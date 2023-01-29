@@ -24,7 +24,7 @@ from ethon.pyutils import rename
 
 from .. import MSDZULQURNAIN, BOT_UN
 
-from LOCAL.localisation import AdminZulll, SUPPORT_LINK, JPG, JPG2, JPG3
+from LOCAL.localisation import admz, SUPPORT_LINK, JPG, JPG2, JPG3
 
 async def trim(event, msg, st, et):
     MSDZULQURNAIN = event.client
@@ -66,7 +66,7 @@ async def trim(event, msg, st, et):
         print(e)
         return await edit.edit(f"Terjadi kesalahan saat memotong!\n\nContact [SUPPORT]({SUPPORT_LINK})", link_preview=False)
     UT = time.time()
-    text = f"TELAH TERPOTONG dari: @{BOT_UN}\n\n Owner : {AdminZulll}👤"
+    text = f"TELAH TERPOTONG dari: @{BOT_UN}\n\n Owner : {admz}👤"
     try:
         metadata = video_metadata(out2)
         width = metadata["width"]
