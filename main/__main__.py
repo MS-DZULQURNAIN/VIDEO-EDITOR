@@ -16,7 +16,7 @@ for name in files:
         load_plugins(plugin_name.replace(".py", ""))
         
 print("Bot telah aktif🔥🔥🔥")
-print("@MSDEPLOY | @MS_DZULQURNAIN_NET")
+print("@MSPR0JECT | @MsSUPP0RT")
 
 if __name__ == "__main__":
     MSDZULQURNAIN.run_until_disconnected()
