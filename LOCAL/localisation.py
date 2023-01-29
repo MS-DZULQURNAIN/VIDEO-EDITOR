@@ -1,13 +1,13 @@
 #Don't be a thief by stealing other's Hardwork, it took time and effort to make this repo.
 #Respect my work by not making any changes here.
 
-START_TEXT = "**Hallo Kamu😼\n\nSaya adalah MS VIDEO EDITOR!!!💻**\n\nSaya bisa melakukan beberapa perintah editing video seperti `encode`,`convert`,`rename`,`screenshot`,`trim`,`thumbnail`😎\n\nUntuk memasang thumbnail silahkan ketik `/thumbnail`🖼\n\n**Silahkan kirim video untuk mulai mengedit:v**"
+START_TEXT = "**Hallo Kamu😼\n\nSaya adalah MS VIDEO EDITOR!!!💻**\n\nSaya bisa melakukan beberapa perintah editing video seperti `encode video`,`convert video`,`kompres video`,`ubah nama video`,`10 screenshot generator`,`potong durasi video`,`pasang thumbnail`😎\n\nUntuk memasang thumbnail silahkan ketik `/thumbnail`🖼\n\n**Silahkan kirim video untuk mulai mengedit:v**"
 
 admz = "[MSDZULQURNAIN](https://t.me/MSDZULQURNAIN)"
 
-thumbnail_text = "Thumbnail hanya bisa dipasang dengan durasi video minimal 20 detik, Jika dibawah 20 detik makan thumbnail tidak akan terpasang otomatis🗿👌"
+thumbnail_text = "Thumbnail hanya bisa dipasang dengan durasi video minimal 20 detik, Jika dibawah 20 detik maka thumbnail tidak akan terpasang otomatis🗿👌"
 
-join_text = "**SILAHKAH JOIN SEMUA CHANNEL DIBAWAH INI UNTUK MENGGUNAKAN SAYA**😉\n\n Jika sudah silahkan kirim ulang video nya😁"
+join_text = "**SILAHKAH JOIN CHANNEL DIBAWAH INI UNTUK MENGGUNAKAN SAYA**😉\n\n Jika sudah silahkan kirim ulang video nya😁"
 
 CHANNEL_LINK = "https://t.me/MSPR0JECT"
 
@@ -19,18 +19,18 @@ help_text = """**❖MS VIDEO EDITOR❖**
 
 Apa itu¿?
 •Encode⇝Ubah resolusi video mu
-•HEVC compress⇝Mengubah resolusi burik
+•HEVC compress⇝Kompres video lebih burik
 •FAST compress⇝Kompres dengan cepat & lebih efisien
 •Convert⇝Mengubah format/mengekstrak audio dari video mu
-•Rename⇝Ganti nama file apa pun, ekstensi tidak diperlukan
-•SSHOTS⇝Buat 10 screenshot di video mu
-•Trim⇝Potong durasi video
+•Ubah nama/rename⇝Ganti nama file apa pun, ekstensi tidak diperlukan
+•Screenshot⇝Buat 10 screenshot di video mu
+•Potong durasi video/trim⇝Potong durasi video
 
-Kalau masih ga paham pahamin aja sendiri 🗿"""
+**Kalau masih ga paham pahamin aja sendiri 🗿**"""
 
 source_text = "**JOIN CHANNEL & GRUB SEBELUM MENGGUNAKAN SAYA**"
 
-spam_notice = "NGAPAIN DI PENCET?🧐"
+spam_notice = "NGAPAIN DI PENCET"
 
 JPG = "LOCAL/video_convertor.jpg"
 
