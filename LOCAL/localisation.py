@@ -3,7 +3,7 @@
 
 START_TEXT = "**Hallo Kamu😼\n\nSaya adalah MS VIDEO EDITOR!!!💻**\n\nSaya bisa melakukan beberapa perintah editing video seperti `encode`,`convert`,`rename`,`screenshot`,`trim`,`thumbnail`😎\n\nUntuk memasang thumbnail silahkan ketik `/thumbnail`🖼\n\n**Silahkan kirim video untuk mulai mengedit:v**"
 
-ADMZ = "__MSDZULQURNAIN.t.me__"
+admz = "__MSDZULQURNAIN.t.me__"
 
 thumbnail_text = "Thumbnail hanya bisa dipasang dengan durasi video minimal 20 detik, Jika dibawah 20 detik makan thumbnail tidak akan terpasang otomatis🗿👌"
 
