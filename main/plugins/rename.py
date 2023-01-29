@@ -25,7 +25,7 @@ from .. import MSDZULQURNAIN, BOT_UN, MONGODB_URI
 
 from main.Database.database import Database
 from LOCAL.localisation import JPG3 as t
-from LOCAL.localisation import SUPPORT_LINK
+from LOCAL.localisation import admz, SUPPORT_LINK
 
 async def media_rename(event, msg, new_name):
     edit = await event.client.send_message(event.chat_id, 'Sedang mengubah nama...', reply_to=msg.id)
@@ -102,7 +102,7 @@ async def media_rename(event, msg, new_name):
                 UT = time.time()
                 uploader = await fast_upload(out, out, UT, MSDZULQURNAIN, edit, '**MENGUPLOAD:**')
                 net_time = round(DT - UT)
-                await MSDZULQURNAIN.send_file(event.chat_id, uploader, caption=f"TELAH TERUBAH NAMA dari : @{BOT_UN}\nTotal waktu:{net_time} detik\n\n Owner : @ms_dzulqurnain👤", thumb=THUMB, force_document=True)
+                await MSDZULQURNAIN.send_file(event.chat_id, uploader, caption=f"TELAH TERUBAH NAMA dari : @{BOT_UN}\nTotal waktu:{net_time} detik\n\n Owner : {admz}👤", thumb=THUMB, force_document=True)
             except Exception as e:
                 await edit.edit(f"Terjadi kesalahan saat mengupload!\n\nContact [SUPPORT]({SUPPORT_LINK})", link_preview=False)
                 print(e)
@@ -125,7 +125,7 @@ async def media_rename(event, msg, new_name):
             UT = time.time()
             uploader = await fast_upload(out, out, UT, MSDZULQURNAIN, edit, '**MENGUPLOAD:**')
             net_time = round(DT - UT)
-            await MSDZULQURNAIN.send_file(event.chat_id, uploader, caption=f"TELAH TERUBAH NAMA dari: @{BOT_UN}\nTotal waktu:{net_time} detik\n\n Owner : @ms_dzulqurnain👤", thumb=THUMB, force_document=True)
+            await MSDZULQURNAIN.send_file(event.chat_id, uploader, caption=f"TELAH TERUBAH NAMA dari: @{BOT_UN}\nTotal waktu:{net_time} detik\n\n Owner : {admz}👤", thumb=THUMB, force_document=True)
         else:
             if 'mp4' in mime:
                 metadata = video_metadata(out)
@@ -136,7 +136,7 @@ async def media_rename(event, msg, new_name):
                 UT = time.time()
                 uploader = await fast_upload(f'{out}', f'{out}', UT, MSDZULQURNAIN, edit, '**MENGUPLOAD:**')
                 net_time = round(DT - UT)
-                await MSDZULQURNAIN.send_file(event.chat_id, uploader, caption=f"TELAH TERUBAH NAMA dari: @{BOT_UN}\nTotal waktu:{net_time} detik\n\n Owner : @ms_dzulqurnain👤", thumb=THUMB, attributes=attributes, force_document=False)
+                await MSDZULQURNAIN.send_file(event.chat_id, uploader, caption=f"TELAH TERUBAH NAMA dari: @{BOT_UN}\nTotal waktu:{net_time} detik\n\n Owner : {admz}👤", thumb=THUMB, attributes=attributes, force_document=False)
             elif msg.video:
                 metadata = video_metadata(out)
                 width = metadata["width"]
@@ -146,12 +146,12 @@ async def media_rename(event, msg, new_name):
                 UT = time.time()
                 uploader = await fast_upload(f'{out}', f'{out}', UT, MSDZULQURNAIN, edit, '**MENGUPLOAD:**')
                 net_time = round(DT - UT)
-                await MSDZULQURNAIN.send_file(event.chat_id, uploader, caption=f"TELAH TERUBAH NAMA dari: @{BOT_UN}\nTotal waktu:{net_time} detik\n\n Owner : @ms_dzulqurnain👤", thumb=THUMB, attributes=attributes, force_document=False)            
+                await MSDZULQURNAIN.send_file(event.chat_id, uploader, caption=f"TELAH TERUBAH NAMA dari: @{BOT_UN}\nTotal waktu:{net_time} detik\n\n Owner : {admz}👤", thumb=THUMB, attributes=attributes, force_document=False)            
             else:
                 UT = time.time()
                 uploader = await fast_upload(out, out, UT, MSDZULQURNAIN, edit, '**MENGUPLOAD:**')
                 net_time = round(DT - UT)
-                await MSDZULQURNAIN.send_file(event.chat_id, uploader, caption=f"TELAH TERUBAH NAMA dari: @{BOT_UN}\nTotal waktu:{net_time} detik\n\n Owner : @ms_dzulqurnain👤", thumb=THUMB, force_document=True)
+                await MSDZULQURNAIN.send_file(event.chat_id, uploader, caption=f"TELAH TERUBAH NAMA dari: @{BOT_UN}\nTotal waktu:{net_time} detik\n\n Owner : {admz}👤", thumb=THUMB, force_document=True)
     except Exception as e:
         await edit.edit(f"Terjadi kesalahan saat mengupload!\n\nContact [SUPPORT]({SUPPORT_LINK})", link_preview=False)
         print(e)
