@@ -23,7 +23,7 @@ from ethon.pyfunc import video_metadata
 
 from .. import MSDZULQURNAIN, BOT_UN, LOG_CHANNEL
 
-from LOCAL.localisation import SUPPORT_LINK, JPG, JPG2, JPG3
+from LOCAL.localisation import admz, SUPPORT_LINK, JPG, JPG2, JPG3
 from LOCAL.utils import ffmpeg_progress
 from main.plugins.actions import LOG_START, LOG_END
 
@@ -108,9 +108,9 @@ async def compress(event, msg, ffmpeg_cmd=0, ps_name=None):
     os.rename(out, out2)
     i_size = os.path.getsize(name)
     f_size = os.path.getsize(out2)     
-    text = F'TERENCODE dari: @{BOT_UN}\n\n Owner : @ms_dzulqurnain👤'
+    text = F'TERENCODE dari: @{BOT_UN}\n\n Owner : {admz}👤'
     if ps_name != "**MENGENCODE:**":
-        text = f'TELAH TERKOMPRES dari: @{BOT_UN}\n\nsebelum dikompres : `{i_size}`\nsetelah dikompres : `{f_size}\n\n Owner : @ms_dzulqurnain👤`'
+        text = f'TELAH TERKOMPRES dari: @{BOT_UN}\n\nsebelum dikompres : `{i_size}`\nsetelah dikompres : `{f_size}`\n\n Owner : {admz}👤'
     UT = time.time()
     await log.edit("Mengupload file.")
     if 'x-matroska' in mime:
@@ -156,7 +156,7 @@ async def compress(event, msg, ffmpeg_cmd=0, ps_name=None):
     os.remove(name)
     os.remove(out2)
     await log.delete()
-    log_end_text2 = f'**{_ps} PROSES SELESAI**\n\nWaktu: {round((time.time()-DT)/60)} menit\nUkuran awal: {i_size/1000000}mb.\nUkuran akhir: {f_size/1000000}mb.\n\n Owner : @ms_dzulqurnain👤[Bot is free now.]({SUPPORT_LINK})'
+    log_end_text2 = f'**{_ps} PROSES SELESAI**\n\nWaktu: {round((time.time()-DT)/60)} menit\nUkuran awal: {i_size/1000000}mb.\nUkuran akhir: {f_size/1000000}mb.\n\n Owner : {admz}👤[Bot is free now.]({SUPPORT_LINK})'
     await LOG_END(event, log_end_text2)
     
 
