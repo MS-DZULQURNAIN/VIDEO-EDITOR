@@ -44,24 +44,26 @@
             "value": "-1001711263311"
         },
         "ACCESS_CHANNEL": {
-            "description": "Private group id to spy users.(Should be public group)",
-            "value": "-1001869460376"
+            "description": "ID ACCESS CHANNEL privat",
+            "value": "-1001590305575"
         },
         "MONGODB_URI": {
-            "description": "Your mongodb url here.",
-            "value": "mongodb+srv://Vsmi:bot@cluster0.hcoo8gc.mongodb.net/?retryWrites=true&w=majority"
+            "description": "url Database dari MongoDB",
+            "value": "mongodb+srv://Vsmi:bot@cluster0.hcoo8gc.mongodb.net/?retryWrites=true&w=majority",
+            "required": false
         },
         "FORCESUB": {
-            "description": "Channel id to which u want user be force subcribed.(Should be public)",
-            "value": "-1001767587785"
+            "description": "ID FORCESUB PUBLIK",
+            "value": "-1001818372365"
         },
         "FORCESUB_UN": {
-            "description": "Forcesub channel's username.",
-            "value": "MSDEPLOY"
+            "description": "username FORCESUB PUBLIK",
+            "value": "",
+            "required": false
         },
         "BOT_UN": {
-            "description": "Username of your bot.",
-            "value": "MsVideoEDITOR_bot"
+            "description": "Username bot",
+            "value": "MsVIDE0EDIT0R_bot"
         }
     },
     "buildpacks": [
