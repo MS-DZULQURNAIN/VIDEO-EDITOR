@@ -1,50 +1,47 @@
 {
-    "name": "MsVideoEDITOR",
+    "name": "MsVideoEDIT0R",
     "description": "BOT BY MS-DZULQURNAIN",
     "logo": "",
     "keywords": [
-        "bot",
-        "telegram",
-        "video",
-        "editor"
+        "bot"
     ],
     "repository": "https://github.com/MS-DZULQURNAIN/VIDEO-EDITOR",
     "website": "",
-    "success_url": "https://t.me/MSDEPLOY",
+    "success_url": "https://t.me/MSPR0JECT",
     "env": {
         "API_HASH": {
-            "description": "Your API HASH from my.telegram.org",
+            "description": "API HASH dari my.telegram.org",
             "value": "76438a4fa64f9e43b3921a204a79e000"
         },
         "API_ID": {
-            "description": "Your API ID from my.telegram.org",
+            "description": "API ID dari my.telegram.org",
             "value": "26915599"
         },
         "BOT_TOKEN": {
-            "description": "Bot token, get it from @BotFather.",
-            "value": "5897361812:AAEMTxJoGlGudtfchrL2mSNSmv7Y4ODu3kw"
+            "description": "Bot Token dari @BotFather.",
+            "value": "6196825661:AAHSC13NvBAkSuK9Ss8wthvRjJa4PjgYIls"
         },
         "AUTH_USERS": {
-            "description": "Bot owner's UserID.",
-            "value": "5463819478"
+            "description": "OWNER ID",
+            "value": "5916030472"
         },
         "HEROKU_API": {
-            "description": "Your heroku app name(optional, add only if you want to restart directly from tg.",
+            "description": "Heroku Api (optional) kalo mau restart dari telegram",
             "value": "",
             "required": false
         },
         "HEROKU_APP_NAME": {
-            "description": "Your heroku api, you can get it from heroku account settings(optional, add only if you want to restart directly from tg.",
+            "description": "Heroku App Name (optional) kalo mau restart dari telegram",
             "value": "",
             "required": false
         },
         "LOG_CHANNEL": {
-            "description": "Log channel username, without using '@'.",
-            "value": "mylogpubmsdeploy"
+            "description": "username loog channel publik, jangan pakai'@'.",
+            "value": "MsL0GPUB"
         },
         "LOG_ID": {
-            "description": "Log channel `ID` (Should be Public)",
-            "value": "-1001668020448"
+            "description": "ID Log channel publik",
+            "value": "-1001711263311"
         },
         "ACCESS_CHANNEL": {
             "description": "Private group id to spy users.(Should be public group)",
