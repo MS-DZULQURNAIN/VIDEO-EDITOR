@@ -67,6 +67,8 @@ async def thumbnail(event):
 async def join(event):
     await event.reply(f'{join_text}', 
                       buttons=[[
+                                Button.url("🄹♢ɨ𝐍  🄲ΉΛ𝐍𝐍ΞꝈ", url="https://t.me/MsSUPP0RT")], 
+                                [
                                 Button.url("🄹♢ɨ𝐍  🄲ΉΛ𝐍𝐍ΞꝈ", url="https://semawur.com/U5VaAQmq")],
                                 [Button.inline("TUTUP💝", data="tutup")
                               ]]) 
