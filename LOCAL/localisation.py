@@ -5,7 +5,7 @@ START_TEXT = "**Hallo Kamu😼\n\nSaya adalah MS VIDEO EDITOR!!!💻**\n\nSaya b
 
 admz = "[MSDZULQURNAIN](https://t.me/MSDZULQURNAIN)"
 
-donate_text = "**DONASI UNTUK ADMIN SUPAYA BOT TETAP AKTIF**😉\n\nDANA : 082137969411\nOVO : 082137969411\nGOPAY : 082137969411\LINK AJA : 082137969411\nSHOPEE PAY : 082137969411\n\n**TERIMA KASIH YANG UDAH DONASI**😇"
+donate_text = "**DONASI UNTUK ADMIN SUPAYA BOT TETAP AKTIF**😉\n\nDANA : 082137969411\nOVO : 082137969411\nGOPAY : 082137969411\nLINK AJA : 082137969411\nSHOPEE PAY : 082137969411\n\n**TERIMA KASIH YANG UDAH DONASI**😇"
 
 thumbnail_text = "Thumbnail hanya bisa dipasang dengan durasi video minimal 20 detik, Jika dibawah 20 detik maka thumbnail tidak akan terpasang otomatis🗿👌"
 
