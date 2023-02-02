@@ -49,7 +49,7 @@ async def compin(event):
             if 'video' in video:
                 await event.reply("**MS VIDEO EDITOR📽🎞**\n\nBot hanya bisa di akses 1 pengguna di 1 waktu,Jika kamu spam maka akan otomatis **KEBANNED**😏",
                             buttons=[
-                                [Button.inline("KOMPRES VIDEO📉", data="compress")],
+                                [Button.inline("EXTRACT AUDIO MP3🎼", data="extaudio")],
                                 [Button.inline("CONVERT FORMAT🔀", data="convert")],
                                 [Button.inline("UBAH NAMA📝", data="rename")],
                                 [Button.inline("SCREENSHOT📸", data="sshots")],
@@ -69,12 +69,11 @@ async def compin(event):
     
 
      
-@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="compress"))
+@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="extaudio"))
 async def _compress(event):
-    await event.edit("**KOMPRES VIDEO**📉",
+    await event.edit("**EXTRACT VIDEO MU MENJADI AUDIO MP3**😊",
                     buttons=[
-                        [Button.inline("HEVC COMPRESS", data="hcomp"),
-                         Button.inline("FAST COMPRESS", data="fcomp")],
+                        [Button.inline("EXTRACT", data="mp3")],
                         [Button.inline("KEMBALI", data="back")]])
 
 @MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="convert"))
@@ -83,8 +82,7 @@ async def convert(event):
     msg = await button.get_reply_message()  
     await event.edit("**CONVERT FORMAT**🔀",
                     buttons=[
-                        [Button.inline("MP3", data="mp3"),
-                         Button.inline("FLAC", data="flac"),
+                        [Button.inline("FLAC", data="flac"),
                          Button.inline("WAV", data="wav")],
                         [Button.inline("MP4", data="mp4"),
                          Button.inline("WEBM", data="webm"),
@@ -97,7 +95,7 @@ async def convert(event):
 async def back(event):
     await event.edit("**MS VIDEO EDITOR📽🎞**\n\nBot hanya bisa di akses 1 pengguna di 1 waktu,Jika kamu spam maka akan otomatis **KEBANNED**😏",
                        buttons=[
-                                [Button.inline("KOMPRES VIDEO📉", data="compress")],
+                                [Button.inline("EXTRACT AUDIO MP3🎼", data="extaudio")],
                                 [Button.inline("CONVERT FORMAT🔀", data="convert")],
                                 [Button.inline("UBAH NAMA📝", data="rename")],
                                 [Button.inline("SCREENSHOT📸", data="sshots")],
