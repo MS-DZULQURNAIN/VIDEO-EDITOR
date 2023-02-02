@@ -28,7 +28,7 @@ from main.plugins.convertor import mp3, flac, wav, mp4, mkv, webm, file, video
 from main.Database.database import Database
 from main.plugins.actions import force_sub
 from main.plugins.encoder import encode
-from main.plugins.ssgen import screenshot
+hdjdjfrom main.plugins.ssgen import screenshot
 from LOCAL.localisation import source_text, SUPPORT_LINK
 
 #Don't be a MF by stealing someone's hardwork.
@@ -98,7 +98,6 @@ async def convert(event):
 async def back(event):
     await event.edit("**MS VIDEO EDITOR📽🎞**\n\nBot hanya bisa di akses 1 pengguna di 1 waktu,Jika kamu spam maka akan otomatis **KEBANNED**😏",
                        buttons=[
-                                [Button.inline("ENCODE RESOLUSI♻", data="encode")],
                                 [Button.inline("KOMPRES VIDEO📉", data="compress")],
                                 [Button.inline("CONVERT FORMAT🔀", data="convert")],
                                 [Button.inline("UBAH NAMA📝", data="rename")],
