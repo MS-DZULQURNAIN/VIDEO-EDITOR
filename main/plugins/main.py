@@ -22,7 +22,6 @@ from ethon.pyfunc import video_metadata
 from .. import MSDZULQURNAIN, LOG_CHANNEL, FORCESUB_UN, MONGODB_URI, ACCESS_CHANNEL
 
 from main.plugins.rename import media_rename
-from main.plugins.compressor import compress
 from main.plugins.trimmer import trim
 from main.plugins.convertor import mp3, flac, wav, mp4, mkv, webm, file, video
 from main.Database.database import Database
