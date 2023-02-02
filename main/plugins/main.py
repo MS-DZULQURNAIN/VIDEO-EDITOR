@@ -27,8 +27,7 @@ from main.plugins.trimmer import trim
 from main.plugins.convertor import mp3, flac, wav, mp4, mkv, webm, file, video
 from main.Database.database import Database
 from main.plugins.actions import force_sub
-from main.plugins.encoder import encode
-hdjdjfrom main.plugins.ssgen import screenshot
+from main.plugins.ssgen import screenshot
 from LOCAL.localisation import source_text, SUPPORT_LINK
 
 #Don't be a MF by stealing someone's hardwork.
