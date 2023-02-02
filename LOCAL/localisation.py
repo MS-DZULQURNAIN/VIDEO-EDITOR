@@ -1,7 +1,7 @@
 #Don't be a thief by stealing other's Hardwork, it took time and effort to make this repo.
 #Respect my work by not making any changes here.
 
-START_TEXT = "**Hallo Kamu😼\n\nSaya adalah MS VIDEO EDITOR!!!💻**\n\nSaya bisa melakukan beberapa perintah editing video seperti `encode video`,`convert video`,`kompres video`,`ubah nama video`,`10 screenshot generator`,`potong durasi video`,`pasang thumbnail`😎\n\nUntuk memasang thumbnail silahkan ketik `/thumbnail`🖼\n\n**Silahkan kirim video untuk mulai mengedit:v**"
+START_TEXT = "**Hallo Kamu😼\n\nSaya adalah MS VIDEO EDITOR!!!💻**\n\nSaya bisa melakukan beberapa perintah editing video seperti `convert video`,`kompres video`,`ubah nama video`,`10 screenshot generator`,`potong durasi video`,`pasang thumbnail`😎\n\nUntuk memasang thumbnail silahkan ketik `/thumbnail`🖼\n\n**Silahkan kirim video untuk mulai mengedit:v**"
 
 admz = "[MSDZULQURNAIN](https://t.me/MSDZULQURNAIN)"
 
@@ -20,7 +20,6 @@ info_text = "❖MS VIDEO EDITOR❖\n\n✰ Owner Repo : @ms_dzulqurnain\n⇝ Chan
 help_text = """**❖MS VIDEO EDITOR❖**
 
 Apa itu¿?
-•Encode⇝Ubah resolusi video mu
 •HEVC compress⇝Kompres video lebih burik
 •FAST compress⇝Kompres dengan cepat & lebih efisien
 •Convert⇝Mengubah format/mengekstrak audio dari video mu
