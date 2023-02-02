@@ -50,7 +50,6 @@ async def compin(event):
             if 'video' in video:
                 await event.reply("**MS VIDEO EDITOR📽🎞**\n\nBot hanya bisa di akses 1 pengguna di 1 waktu,Jika kamu spam maka akan otomatis **KEBANNED**😏",
                             buttons=[
-                                [Button.inline("ENCODE RESOLUSI♻", data="encode")],
                                 [Button.inline("KOMPRES VIDEO📉", data="compress")],
                                 [Button.inline("CONVERT FORMAT🔀", data="convert")],
                                 [Button.inline("UBAH NAMA📝", data="rename")],
@@ -69,17 +68,7 @@ async def compin(event):
                                 [Button.inline("UBAH NAMA📝", data="rename")]])
     await event.forward_to(int(ACCESS_CHANNEL))
     
-@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="encode"))
-async def _encode(event):
-    await event.edit("**ENCODE RESOLUSI**♻",
-                    buttons=[
-                        [Button.inline("240p", data="240"),
-                         Button.inline("360p", data="360")],
-                        [Button.inline("480p", data="480"),
-                         Button.inline("720p", data="720")],
-                        [Button.inline("x264", data="264"),
-                         Button.inline("x265", data="265")],
-                        [Button.inline("KEMBALI", data="back")]])
+
      
 @MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="compress"))
 async def _compress(event):
