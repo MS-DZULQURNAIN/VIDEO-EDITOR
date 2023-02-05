@@ -33,8 +33,6 @@ source_text = "**JOIN CHANNEL & GRUB SEBELUM MENGGUNAKAN SAYA**"
 
 spam_notice = "NGAPAIN DI PENCET"
 
-ZSTART = "LOCAL/20230204_110153.jpg"
-
 JPG = "LOCAL/video_convertor.jpg"
 
 JPG0 = 'https://telegra.ph/file/d98c559b56ef884ef3bad.jpg'
