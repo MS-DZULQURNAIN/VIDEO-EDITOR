@@ -44,7 +44,7 @@ async def help(event):
                       buttons=[[
                                Button.inline("DONATE🙏", data="donasi")],
                                [
-                               Button.inline("TUTUP💝", data="tutup")
+                               Button.inline("TUTUP🚪", data="tutup")
                               ]])
 
 @MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="donasi"))
@@ -67,7 +67,7 @@ async def thumbnail(event):
                                 [
                                 Button.inline("HAPUS THUMBNAIL🗑", data="remt")],
                                 [
-                                Button.inline("TUTUP💝", data="tutup")
+                                Button.inline("TUTUP🚪", data="tutup")
                               ]])
   
 @MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/join"))
@@ -76,8 +76,8 @@ async def join(event):
                       buttons=[[
                                 Button.url("🄹♢ɨ𝐍  🄲ΉΛ𝐍𝐍ΞꝈ", url="https://t.me/MsSUPP0RT")], 
                                 [
-                                Button.url("🄹♢ɨ𝐍  🄲ΉΛ𝐍𝐍ΞꝈ", url="https://semawur.com/U5VaAQmq")],
-                                [Button.inline("TUTUP💝", data="tutup")
+                                Button.url("🄹♢ɨ𝐍  🄲ΉΛ𝐍𝐍ΞꝈ", url="https://shareduit.pw/B26BYC4zT")],
+                                [Button.inline("TUTUP🚪", data="tutup")
                               ]]) 
  #-----------------------------------------------------------------------------------------------                            
     
