@@ -24,7 +24,7 @@ from LOCAL.localisation import donate_text, join_text, thumbnail_text, info_text
 
 @MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
-    await event.reply('{ZSTART}')
+    await event.reply(f'{ZSTART}',
     await event.edit({f'{mulai}', 
                       buttons=[[
                                 Button.url("DEVELOPER👤", url="https://t.me/MSDZULQURNAIN")],
@@ -33,7 +33,7 @@ async def start(event):
                                 Button.url("🄼🅂 Ꮥᴜקק♢ꭈׁׅ†", url="https://t.me/MsSUPP0RT")],
                                 [
                                 Button.inline("TENTANG SAYA💻", data="tentang")]
-                              ]) 
+                              ])) 
     
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     sendid = f'{event.sender_id}'
