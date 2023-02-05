@@ -15,7 +15,7 @@ CHANNEL_LINK = "https://t.me/MSPR0JECT"
 
 SUPPORT_LINK = "https://t.me/MsSUPP0RT"
 
-info_text = "**❖MS VIDEO EDITOR❖\n\n✰ Owner Repo : [🄼🅂 𝗗🆉𝗨𝗟𝚀𝐔𝐑𝐍Λ𝐈𝐍](https://t.me/MSDZULQURNAIN)\n⇝ Channel : [🄼🅂 ק𝙍♢JΞC†](https://t.me/MSPR0JECT)\n⇝ Support : [🄼🅂 Ꮥᴜקק♢ꭈׁׅ†](https://t.me/MsSUPP0RT)**\n\n__IKAN HIU MAKAN TAHU,\nI LOVE YOU💘__\n\n**ᝣ 🄼🅂 𝗗🆉𝗨𝗟𝚀𝐔𝐑𝐍Λ𝐈𝐍 ᝣ**"   
+info_text = "**❖MS VIDEO EDITOR❖\n\n✰ Owner Repo : @MSDZULQURNAIN\n⇝ Channel : @MSPR0JECT\n⇝ Support : @MsSUPP0RT**\n\n__IKAN HIU MAKAN TAHU,\nI LOVE YOU💘__\n\n**ᝣ 🄼🅂 𝗗🆉𝗨𝗟𝚀𝐔𝐑𝐍Λ𝐈𝐍 ᝣ**"   
 
 help_text = """**❖MS VIDEO EDITOR❖**
 
