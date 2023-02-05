@@ -15,13 +15,12 @@ CHANNEL_LINK = "https://t.me/MSPR0JECT"
 
 SUPPORT_LINK = "https://t.me/MsSUPP0RT"
 
-info_text = "❖MS VIDEO EDITOR❖\n\n✰ Owner Repo : @ms_dzulqurnain\n⇝ Channel : @MSDEPLOY\n⇝ GRUB : @MS_DZULQURNAIN_NET\n⇝ Beli/bongkar chip hdi terpercaya: @ZULLL_CHIP\n\nᝣMS DEPLOYᝣ"   
+info_text = "**❖MS VIDEO EDITOR❖\n\n✰ Owner Repo : <a href='https://t.me/MSDZULQURNAIN'>🄼🅂 𝗗🆉𝗨𝗟𝚀𝐔𝐑𝐍Λ𝐈𝐍</a>\n⇝ Channel : <a href='https://t.me/MSPR0JECT'>🄼🅂 ק𝙍♢JΞC†</a>\n⇝ Support : <a href='https://t.me/MsSUPP0RT'>🄼🅂 Ꮥᴜקק♢ꭈׁׅ†</a>\n\n__IKAN HIU MAKAN TAHU,\nI LOVE YOU💘__\n\nᝣ<a href='https://t.me/MSDZULQURNAIN'>🄼🅂 𝗗🆉𝗨𝗟𝚀𝐔𝐑𝐍Λ𝐈𝐍</a>ᝣ"   
 
 help_text = """**❖MS VIDEO EDITOR❖**
 
 Apa itu¿?
-•HEVC compress⇝Kompres video lebih burik
-•FAST compress⇝Kompres dengan cepat & lebih efisien
+•Extrak audio⇝Mengekstrak audio/musik yg ada didalam video mu
 •Convert⇝Mengubah format/mengekstrak audio dari video mu
 •Ubah nama/rename⇝Ganti nama file apa pun, ekstensi tidak diperlukan
 •Screenshot⇝Buat 10 screenshot di video mu
