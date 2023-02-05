@@ -48,10 +48,10 @@ async def compin(event):
             if 'video' in video:
                 await event.reply("**MS VIDEO EDITOR📽🎞**\n\nBot hanya bisa di akses 1 pengguna di 1 waktu,Jika kamu spam maka akan otomatis **KEBANNED**😏",
                             buttons=[
-                                [Button.inline("EXTRACT AUDIO MP3🎼", data="extaudio")],
-                                [Button.inline("CONVERT FORMAT🔀", data="convert")],
-                                [Button.inline("UBAH NAMA📝", data="rename")],
-                                [Button.inline("SCREENSHOT📸", data="sshots")],
+                                [Button.inline("EXTRACT AUDIO MP3🎼", data="extaudio"),
+                                 Button.inline("CONVERT FORMAT🔀", data="convert")],
+                                [Button.inline("UBAH NAMA📝", data="rename"),
+                                 Button.inline("SCREENSHOT📸", data="sshots")],
                                 [Button.inline("POTONG DURASI✂", data="trim")]
                             ])
             elif 'png' in video:
@@ -72,7 +72,7 @@ async def compin(event):
 async def _compress(event):
     await event.edit("**EXTRACT VIDEO MU MENJADI AUDIO MP3**😊",
                     buttons=[
-                        [Button.inline("EXTRACT", data="mp3")],
+                        [Button.inline("EXTRACT🎼", data="mp3")],
                         [Button.inline("KEMBALI", data="back")]])
 
 @MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="convert"))
@@ -84,20 +84,20 @@ async def convert(event):
                         [Button.inline("FLAC", data="flac"),
                          Button.inline("WAV", data="wav")],
                         [Button.inline("MP4", data="mp4"),
-                         Button.inline("WEBM", data="webm"),
-                         Button.inline("MKV", data="mkv")],
-                        [Button.inline("FILE", data="file"),
-                         Button.inline("VIDEO", data="video")],
+                         Button.inline("WEBM", data="webm")],
+                        [Button.inline("MKV", data="mkv"),
+                         Button.inline("FILE", data="file")],
+                        [Button.inline("VIDEO", data="video")],
                         [Button.inline("KEMBALI", data="back")]])
                         
 @MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="back"))
 async def back(event):
     await event.edit("**MS VIDEO EDITOR📽🎞**\n\nBot hanya bisa di akses 1 pengguna di 1 waktu,Jika kamu spam maka akan otomatis **KEBANNED**😏",
                        buttons=[
-                                [Button.inline("EXTRACT AUDIO MP3🎼", data="extaudio")],
-                                [Button.inline("CONVERT FORMAT🔀", data="convert")],
-                                [Button.inline("UBAH NAMA📝", data="rename")],
-                                [Button.inline("SCREENSHOT📸", data="sshots")],
+                                [Button.inline("EXTRACT AUDIO MP3🎼", data="extaudio"),
+                                 Button.inline("CONVERT FORMAT🔀", data="convert")],
+                                [Button.inline("UBAH NAMA📝", data="rename"),
+                                 Button.inline("SCREENSHOT📸", data="sshots")],
                                 [Button.inline("POTONG DURASI✂", data="trim")]
                                ])
     
