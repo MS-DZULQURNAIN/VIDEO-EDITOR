@@ -33,9 +33,9 @@ async def start(event):
                                 [
                                 Button.inline("TENTANG SAYA💻", data="tentang")]
                               ])
-    tag = [{event.sender.first_name}](tg://user?id={event.sender_id})
-    sendid = f'{event.sender_id}'
-    await MSDZULQURNAIN.send_message(int(ACCESS_CHANNEL), f'{tag} Memulai bot⏸\n\nid : `{sendid}`')
+    idtod = f'{event.sender_id}'
+    tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
+    await MSDZULQURNAIN.send_message(int(ACCESS_CHANNEL), f'{tag} Memulai BOT💻\n\nID : `{idtod}`')
 
 @MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/help"))
 async def help(event):
