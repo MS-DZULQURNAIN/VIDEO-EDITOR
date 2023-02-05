@@ -16,105 +16,94 @@ from telethon import events, Button
 from ethon.teleutils import mention
 from ethon.mystarts import vc_menu
 
-from .. import MSDZULQURNAIN, ACCESS_CHANNEL, AUTH_USERS
+from .. import Drone, ACCESS_CHANNEL, AUTH_USERS
 
 from main.plugins.actions import set_thumbnail, rem_thumbnail, heroku_restart
-from LOCAL.localisation import START_TEXT as mulai
-from LOCAL.localisation import donate_text, join_text, thumbnail_text, info_text, spam_notice, help_text, source_text, SUPPORT_LINK
+from LOCAL.localisation import START_TEXT as st
+from LOCAL.localisation import info_text, spam_notice, help_text, DEV, source_text, SUPPORT_LINK
 
-@MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/start"))
+@Drone.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
-     await event.reply('{mulai}', 
-                      buttons=[[
-                                Button.url("DEVELOPER👤", url="https://t.me/MSDZULQURNAIN")],
-                                [
-                                Button.url("🄼🅂 ק𝙍♢JΞC†", url="https://t.me/MSPR0JECT"),
-                                Button.url("🄼🅂 Ꮥᴜקק♢ꭈׁׅ†", url="https://t.me/MsSUPP0RT")],
-                                [
-                                Button.inline("TENTANG SAYA💻", data="tentang")]
+    await event.reply(f'{st}', 
+                      buttons=[
+                              [Button.inline("Menu.", data="menu")]
                               ])
-    idtod = f'{event.sender_id}'
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
-    await MSDZULQURNAIN.send_message(int(ACCESS_CHANNEL), f'{tag} Memulai BOT💻\n\nID : `{idtod}`')
-
-@MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/help"))
+    await Drone.send_message(int(ACCESS_CHANNEL), f'{tag} started the BOT')
+    
+@Drone.on(events.callbackquery.CallbackQuery(data="menu"))
+async def menu(event):
+    await vc_menu(event)
+    
+@Drone.on(events.callbackquery.CallbackQuery(data="info"))
+async def info(event):
+    await event.edit(f'**ℹ️NFO:**\n\n{info_text}',
+                    buttons=[[
+                         Button.inline("Menu.", data="menu")]])
+    
+@Drone.on(events.callbackquery.CallbackQuery(data="notice"))
+async def notice(event):
+    await event.answer(f'{spam_notice}', alert=True)
+    
+@Drone.on(events.callbackquery.CallbackQuery(data="source"))
+async def source(event):
+    await event.edit(source_text,
+                    buttons=[[
+                         Button.url("FOR PERSONAL USE", url="https://github.com/vasusen-code/videoconvertor/tree/main"),
+                         Button.url("FOR YOUR CHANNEL ", url="https://github.com/vasusen-code/videoconvertor/")]])
+                         
+                    
+@Drone.on(events.callbackquery.CallbackQuery(data="help"))
 async def help(event):
-    await event.reply(f'{help_text}',
-                      buttons=[[
-                               Button.inline("DONATE🙏", data="donasi")],
-                               [
-                               Button.inline("TUTUP🚪", data="tutup")
-                              ]])
-
-@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="donasi"))
-async def tutup(event):  
-    await event.reply(f'{donate_text}')
+    await event.edit('**👥HELP & SETTINGS**',
+                    buttons=[[
+                         Button.inline("SET THUMB", data="sett"),
+                         Button.inline("REM THUMB", data='remt')],
+                         [
+                         Button.inline("PLUGINS", data="plugins"),
+                         Button.inline("RESTART", data="restart")],
+                         [Button.url("SUPPORT", url=f"{SUPPORT_LINK}")],
+                         [
+                         Button.inline("BACK", data="menu")]])
     
-@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="tentang"))
-async def tentang(event):  
-    await event.reply(f'{info_text}')
-    
-@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="tutup"))
-async def tutup(event):  
-    await event.delete()
-    
-@MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/thumbnail"))
-async def thumbnail(event):
-    await event.reply(f'**RULES MEMASANG THUMBNAIL😒**\n\n{thumbnail_text}',
-                      buttons=[[
-                                Button.inline("PASANG THUMBNAIL🖼", data="sett")],
-                                [
-                                Button.inline("HAPUS THUMBNAIL🗑", data="remt")],
-                                [
-                                Button.inline("TUTUP🚪", data="tutup")
-                              ]])
-  
-@MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/join"))
-async def join(event):
-    await event.reply(f'{join_text}', 
-                      buttons=[[
-                                Button.url("🄹♢ɨ𝐍  🄲ΉΛ𝐍𝐍ΞꝈ", url="https://t.me/MsSUPP0RT")], 
-                                [
-                                Button.url("🄹♢ɨ𝐍  🄲ΉΛ𝐍𝐍ΞꝈ", url="https://shareduit.pw/B26BYC4zT")],
-                                [Button.inline("TUTUP🚪", data="tutup")
-                              ]]) 
+@Drone.on(events.callbackquery.CallbackQuery(data="plugins"))
+async def plugins(event):
+    await event.edit(f'{help_text}',
+                    buttons=[[Button.inline("Menu.", data="menu")]])
+                   
  #-----------------------------------------------------------------------------------------------                            
     
-@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="sett"))
+@Drone.on(events.callbackquery.CallbackQuery(data="sett"))
 async def sett(event):    
     button = await event.get_message()
     msg = await button.get_reply_message() 
     await event.delete()
-    async with MSDZULQURNAIN.conversation(event.chat_id) as conv: 
-        xx = await conv.send_message("Kirim saya foto untuk thumbnail dengan reply pesan ini")
+    async with Drone.conversation(event.chat_id) as conv: 
+        xx = await conv.send_message("Send me any image for thumbnail as a `reply` to this message.")
         x = await conv.get_reply()
         if not x.media:
-            xx.edit("Media tidak ada")
+            xx.edit("No media found.")
         mime = x.file.mime_type
         if not 'png' in mime:
             if not 'jpg' in mime:
                 if not 'jpeg' in mime:
-                    return await xx.edit("Foto tidak ada")
+                    return await xx.edit("No image found.")
         await set_thumbnail(event, x.media)
         await xx.delete()
         
-@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="remt"))
+@Drone.on(events.callbackquery.CallbackQuery(data="remt"))
 async def remt(event):  
     await event.delete()
     await rem_thumbnail(event)
-
-@MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/restart"))
-async def restart(event):
-    await event.reply(f'{restart}')
     
-@MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="restart"))
+@Drone.on(events.callbackquery.CallbackQuery(data="restart"))
 async def res(event):
     if not f'{event.sender_id}' == f'{int(AUTH_USERS)}':
-        return await event.edit("Hanya admin yg dapat merestart")
+        return await event.edit("Only authorized user can restart!")
     result = await heroku_restart()
     if result is None:
-        await event.edit("Kamu belum mengisi `HEROKU_API` dan `HEROKU_APP_NAME` vars.")
+        await event.edit("You have not filled `HEROKU_API` and `HEROKU_APP_NAME` vars.")
     elif result is False:
-        await event.edit("Terjadi kesalahan🗿")
+        await event.edit("An error occured!")
     elif result is True:
-        await event.edit("Sedang merestart app, tunggu beberapa menit")
+        await event.edit("Restarting app, wait for a minute.")
