@@ -24,7 +24,7 @@ from LOCAL.localisation import donate_text, join_text, thumbnail_text, info_text
 
 @MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
-    await event.reply({ZSTART})
+    await event.reply.photo('{ZSTART}')
     await event.edit(f'{mulai}', 
                       buttons=[[
                                 Button.url("DEVELOPER👤", url="https://t.me/MSDZULQURNAIN")],
