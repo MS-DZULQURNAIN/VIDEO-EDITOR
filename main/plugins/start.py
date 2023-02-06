@@ -33,9 +33,10 @@ async def start(event):
                                [
                                Button.inline("TENTANG SAYA💻", data="tentang")
                               ]])
+    zid = f'{event.sender_id}'
     tag = f'[{event.sender.first_name}](tg://user?id={event.sender_id})'
     await MSDZULQURNAIN.send_message(int(ACCESS_CHANNEL), f'{tag} MEMULAI BOT✔\n\nID : `{zid}`')
-    zid = f'{event.sender_id}'
+    
 
 @MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/help"))
 async def help(event):
