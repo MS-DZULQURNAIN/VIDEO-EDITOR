@@ -23,7 +23,7 @@ from LOCAL.localisation import donate_text, join_text, thumbnail_text, info_text
 
 @MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
-    await event.reply(f'{mulai}', 
+    await event.reply(f'**Hallo {tag}❤\n\nSaya adalah MS VIDEO EDITOR!!!💻**\n\nSaya dapat melakukan beberapa perintah editing video seperti `ubah mp4 ke mp3``convert video`,`kompres video`,`ubah nama video`,`10 screenshot generator`,`potong durasi video`,`pasang thumbnail`😎\n\nUntuk memasang thumbnail silahkan ketik `/thumbnail`🖼\n\n**Silahkan kirim video untuk mulai mengedit:v', 
                       buttons=[[
                                Button.url("DEVELOPER👤", url="https://t.me/MSDZULQURNAIN")],
                                [
