@@ -18,8 +18,7 @@ from ethon.mystarts import vc_menu
 
 from .. import MSDZULQURNAIN, ACCESS_CHANNEL, AUTH_USERS
 
-from main.plugins.actions import set_thumbnail, rem_thumbnail, heroku_restart
-from LOCAL.localisation import START_TEXT as mulai
+from main.plugins.actions import set_thumbnail, rem_thumbnail, heroku_restart 
 from LOCAL.localisation import donate_text, join_text, thumbnail_text, info_text, spam_notice, help_text, source_text, SUPPORT_LINK
 
 @MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/start"))
