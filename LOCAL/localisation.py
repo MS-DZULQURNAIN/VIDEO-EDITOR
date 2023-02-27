@@ -34,11 +34,11 @@ spam_notice = "NGAPAIN DI PENCET"
 
 JPG = "LOCAL/video_convertor.jpg"
 
-JPG0 = 'https://telegra.ph/file/d98c559b56ef884ef3bad.jpg'
+JPG0 = "LOCAL/video_convertor.jpg"
 
-JPG2 = "LOCAL/20211215_165751.jpg"
+JPG2 = "LOCAL/video_convertor.jpg"
 
-JPG3 = "LOCAL/PicsArt_12-16-08.57.15.jpg"
+JPG3 = "LOCAL/video_convertor.jpg"
 
-JPG4 = "LOCAL/20211219_000258.jpg"
+JPG4 = "LOCAL/video_convertor.jpg"
 
