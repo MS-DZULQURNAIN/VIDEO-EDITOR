@@ -76,7 +76,7 @@ async def join(event):
                       buttons=[[
                                 Button.url("🄹♢ɨ𝐍  🄲ΉΛ𝐍𝐍ΞꝈ", url="https://t.me/MsSUPP0RT")], 
                                 [
-                                Button.url("🄹♢ɨ𝐍  🄲ΉΛ𝐍𝐍ΞꝈ", url="https://shareduit.pw/B26BYC4zT")],
+                                Button.url("🄹♢ɨ𝐍  🄲ΉΛ𝐍𝐍ΞꝈ", url="https://t.me/stories_zulll")],
                                 [Button.inline("TUTUP🚪", data="tutup")
                               ]]) 
     
