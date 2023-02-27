@@ -19,11 +19,11 @@ from ethon.mystarts import vc_menu
 from .. import MSDZULQURNAIN, ACCESS_CHANNEL, AUTH_USERS
 
 from main.plugins.actions import set_thumbnail, rem_thumbnail, heroku_restart 
-from LOCAL.localisation import donate_text, join_text, thumbnail_text, info_text, spam_notice, help_text, source_text, SUPPORT_LINK
+from LOCAL.localisation import JPG, donate_text, join_text, thumbnail_text, info_text, spam_notice, help_text, source_text, SUPPORT_LINK
 
 @MSDZULQURNAIN.on(events.NewMessage(incoming=True, pattern="/start"))
 async def start(event):
-    await event.reply(f'**Hallo {tag}❤\n\nSaya adalah MS VIDEO EDITOR!!!💻**\n\nSaya dapat melakukan beberapa perintah editing video seperti `extract mp4 ke mp3`🎼,`convert video`♻,`ubah nama video`📝,`Screenshot generator`📸,`potong durasi video`✂,`pasang thumbnail`🖼\n\n**Silahkan kirim video untuk mulai mengedit:v\n\nJika butuh bantuan ketik /help', 
+    await event.reply({JPG}f'**Hallo {tag}❤\n\nSaya adalah MS VIDEO EDITOR!!!💻**\n\nSaya dapat melakukan beberapa perintah editing video seperti `extract mp4 ke mp3`🎼,`convert video`♻,`ubah nama video`📝,`Screenshot generator`📸,`potong durasi video`✂,`pasang thumbnail`🖼\n\n**Silahkan kirim video untuk mulai mengedit:v\n\nJika butuh bantuan ketik /help', 
                       buttons=[[
                                Button.url("DEVELOPER👤", url="https://t.me/MSDZULQURNAIN")],
                                [
@@ -52,7 +52,7 @@ async def tutup(event):
     
 @MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="tentang"))
 async def tentang(event):  
-    await event.reply(f'{info_text}')
+    await event.reply({JPG}f'{info_text}')
     
 @MSDZULQURNAIN.on(events.callbackquery.CallbackQuery(data="tutup"))
 async def tutup(event):  
