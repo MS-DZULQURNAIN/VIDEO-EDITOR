@@ -16,7 +16,7 @@ import os, time, asyncio
 
 from telethon import events, Button
 from telethon.tl.types import DocumentAttributeVideo
-
+from ethon.telefunc import fast_download
 from ethon.pyfunc import video_metadata
 
 from .. import MSDZULQURNAIN, LOG_CHANNEL, FORCESUB_UN, MONGODB_URI, ACCESS_CHANNEL
